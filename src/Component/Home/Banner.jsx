@@ -9,7 +9,7 @@ import { Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="">
+    <div className="pb-20">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <img
