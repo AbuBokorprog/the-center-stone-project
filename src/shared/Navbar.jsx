@@ -25,23 +25,33 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-xl"
             >
               <li>
-                <Link>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link>Home</Link>
+                <Link to="allJewelry">All Jewelry</Link>
               </li>
               <li>
-                <Link>Home</Link>
+                <Link to="myJewelry">My Jewelry</Link>
+              </li>
+              <li>
+                <Link to="addJewelry">Add Jewelry</Link>
+              </li>
+              <li>
+                <Link to="blogs">Blogs</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">The Center Stone</a>
+
+          <img className="w-32" src="/src/assets/Image/logo (2).png" alt="" />
+          <Link to="/" className="normal-case text-xl">
+            The Center Stone
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 font-bold">
             <li>
               <Link to="/">Home</Link>
             </li>
