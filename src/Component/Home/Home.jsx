@@ -49,11 +49,16 @@ const Home = () => {
       </section>
       {/* Collection */}
       <section className="py-20">
-        <h2 className="text-center text-5xl font-semibold">Collection</h2>
-        <p className="text-center text-2xl px-32 py-6">
-          Inspired by our multi-ethnic life, we create fine jewelry to share our
-          wonderful tales…
-        </p>
+        <div className="px-40">
+          <h2 className="text-center text-5xl pb-2 font-semibold">
+            Collection
+          </h2>
+          <hr className="border-2 border-black" />
+          <p className="text-center text-2xl py-2">
+            Inspired by our multi-ethnic life, we create fine jewelry to share
+            our wonderful tales…
+          </p>
+        </div>
         <div className="grid grid-cols-4 grid-rows-2 gap-4">
           <div className="">
             <img src="/src/assets/Image/pexels-湉双-陈-2876035.jpg" alt="" />

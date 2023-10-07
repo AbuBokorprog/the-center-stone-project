@@ -20,7 +20,7 @@ const Banner = () => {
           <div className="absolute top-52 text-center text-white">
             <p className="text-xl font-medium">Essential Accessories</p>
             <h1 className="text-7xl font-bold">Golden Charms</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-black" />
             </div>
             <p className="px-40 py-5 font-medium text-white">
@@ -44,7 +44,7 @@ const Banner = () => {
           <div className="relative top-52 text-center text-black">
             <p className="text-xl font-medium">Hot of the season</p>
             <h1 className="text-7xl font-bold">Jewelry Shop</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-black" />
             </div>
             <p className="px-40 py-5 font-medium text-black">
@@ -68,7 +68,7 @@ const Banner = () => {
           <div className="relative top-52 text-center text-black">
             <p className="text-xl font-medium">Ultimate ring models</p>
             <h1 className="text-7xl font-bold">Wedding Ring</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-black" />
             </div>
             <p className="px-40 py-5 font-medium text-black">
@@ -91,7 +91,7 @@ const Banner = () => {
           <div className="absolute top-52 text-center text-white">
             <p className="text-xl font-medium">Essential Accessories</p>
             <h1 className="text-7xl font-bold">Golden Charms</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-black" />
             </div>
             <p className="px-40 py-5 font-medium text-white">
@@ -115,7 +115,7 @@ const Banner = () => {
           <div className="relative top-52 text-center text-white">
             <p className="text-xl font-medium">Hot of the season</p>
             <h1 className="text-7xl font-bold">Jewelry Shop</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-black" />
             </div>
             <p className="px-40 py-5 font-medium text-white">
@@ -139,7 +139,7 @@ const Banner = () => {
           <div className="relative top-52 text-center text-black">
             <p className="text-xl font-medium">Ultimate ring models</p>
             <h1 className="text-7xl font-bold">Wedding Ring</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-black" />
             </div>
             <p className="px-40 py-5 font-medium text-black">
@@ -162,7 +162,7 @@ const Banner = () => {
           <div className="relative top-52 text-center text-white">
             <p className="text-xl font-medium">Essential Accessories</p>
             <h1 className="text-7xl font-bold">Golden Charms</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-white" />
             </div>
             <p className="px-40 py-5 font-medium text-white">
@@ -186,7 +186,7 @@ const Banner = () => {
           <div className="relative top-52 text-center text-white">
             <p className="text-xl font-medium">Ultimate ring models</p>
             <h1 className="text-7xl font-bold">Wedding Ring</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-white" />
             </div>
             <p className="px-40 py-5 font-medium text-white">
@@ -209,7 +209,7 @@ const Banner = () => {
           <div className="relative top-52 text-center text-white">
             <p className="text-xl font-medium">Hot of the season</p>
             <h1 className="text-7xl font-bold">Jewelry Shop</h1> <br />
-            <div className="px-80">
+            <div className="px-40">
               <hr className="border-2 border-white" />
             </div>
             <p className="px-40 py-5 font-medium text-white">
