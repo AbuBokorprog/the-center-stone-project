@@ -18,14 +18,14 @@ const Home = () => {
           <div className="grid grid-cols-2 w-1/2 gap-2">
             <div>
               <img
-                className="w-72"
+                className="w-72 rounded-s-xl"
                 src="/src/assets/Image/pexels-manuel-gamboa-14559459.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
-                className="w-72"
+                className="w-72 rounded-e-xl"
                 src="/src/assets/Image/pexels-kate-photo-1028927.jpg"
                 alt=""
               />
@@ -97,6 +97,54 @@ const Home = () => {
               src="/src/assets/Image/sama-hosseini-6seIjO8gX2w-unsplash.jpg"
               alt=""
             />
+          </div>
+        </div>
+      </section>
+      {/* Meet People */}
+      <section className="py-20">
+        <div className="text-center px-40 pb-5">
+          <p className="text-sm font-medium pb-1 font-serif italic">
+            TEAM MEMBERS
+          </p>
+          <h2 className="text-5xl font-semibold pb-3">
+            Meet <span className="italic">the</span> People
+          </h2>
+          <hr className="border-2 border-black rounded-xl" />
+          <p className="font-medium py-2">
+            At The Center Stone, we believe that every piece of jewelry tells a
+            unique story. Behind each exquisite creation is a team of passionate
+            and skilled individuals who pour their heart and soul into crafting
+            timeless treasures for you.
+          </p>
+        </div>
+        <div className="grid grid-cols-4 gap-5">
+          <div>
+            <img src="/src/assets/Image/owner.jpg" alt="" />
+            <div className="text-center">
+              <h4 className="text-4xl">Michael</h4>
+              <p>Owner</p>
+            </div>
+          </div>
+          <div>
+            <img src="/src/assets/Image/product-manager.jpg" alt="" />
+            <div className="text-center">
+              <h4 className="text-4xl">Isabella</h4>
+              <p>Product Manager</p>
+            </div>
+          </div>
+          <div>
+            <img src="/src/assets/Image/makeup-artist.jpg" alt="" />
+            <div className="text-center">
+              <h4 className="text-4xl">Olivia</h4>
+              <p>Make up artist</p>
+            </div>
+          </div>
+          <div>
+            <img src="/src/assets/Image/photograper.jpg" alt="" />
+            <div className="text-center">
+              <h4 className="text-4xl">Thomas</h4>
+              <p>Photographer</p>
+            </div>
           </div>
         </div>
       </section>
