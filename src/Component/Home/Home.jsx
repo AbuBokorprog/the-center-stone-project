@@ -12,12 +12,9 @@ const Home = () => {
         </h2>
         <p>TODO</p>
       </section>
-      {/* Flex Model */}
+      {/* Section 3 */}
       <section className="py-20">
-        <div>
-          <h2 className="text-center text-5xl font-semibold pb-5">About Us</h2>
-        </div>
-        <div className="flex gap-10 justify-center items-center">
+        <div className="flex flex-row-reverse gap-10 justify-center items-center">
           <div className="grid grid-cols-2 w-1/2 gap-2">
             <div>
               <img
@@ -34,16 +31,19 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="w-1/2">
-            <h3 className="text-4xl font-semibold">The Center Stone</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              perspiciatis quis quidem deserunt temporibus, magni dicta,
-              voluptatum porro, eligendi harum odio consequatur fuga excepturi
-              vitae nemo odit architecto laboriosam. Iure assumenda sequi
-              dolorem! Rem eos nobis suscipit voluptates corrupti! Delectus
-              corporis excepturi libero beatae tenetur!
+          <div className="w-1/2 text-right">
+            <h3 className="text-6xl font-bold">
+              Perfect Match for Every Occasion
+            </h3>
+            <p className="font-semibold py-4 text-4xl">
+              coordinate with other pieces from the collection for a classic
+              look.
             </p>
+            <div className="mx-auto text-center">
+              <button className="btn btn-error bg-red-600 px-10">
+                Discover More
+              </button>
+            </div>
           </div>
         </div>
       </section>
