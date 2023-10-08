@@ -5,7 +5,7 @@ import "./index.css";
 import Main from "./Layout/Main";
 import ErrorPage from "./Component/ErrorPage";
 import Home from "./Component/Home/Home";
-import AllJewelry from "./Component/AllJewelry";
+import AllJewelry from "./Component/ALLJewelry/AllJewelry";
 import MyJewelry from "./Component/MyJewelry";
 import AddJewelry from "./Component/AddJewelry";
 import Blogs from "./Component/Blogs";
