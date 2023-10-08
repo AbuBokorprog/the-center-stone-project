@@ -68,6 +68,7 @@ const AuthProvider = ({ children }) => {
     logout,
     google,
     updateProfileData,
+    loader,
   };
 
   return (

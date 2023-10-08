@@ -48,6 +48,9 @@ const Navbar = () => {
                 <Link to="addJewelry">Add Jewelry</Link>
               </li>
               <li>
+                <Link to="dashboard">Dashboard</Link>
+              </li>
+              <li>
                 <Link to="blogs">Blogs</Link>
               </li>
             </ul>

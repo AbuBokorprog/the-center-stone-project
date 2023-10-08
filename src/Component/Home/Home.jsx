@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
+import BestProduct from "./BestProduct";
 
 const Home = () => {
+  const [best, setBest] = useState([]);
+  useEffect(() => {
+    fetch(`/public/bestProduct.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBest(data);
+      });
+  }, []);
   return (
     <div>
       <Banner></Banner>
       {/* Best Seller Product */}
       <section>
-        <h2 className="text-center text-5xl font-semibold">
+        <h2 className="text-center text-5xl pb-8 font-semibold">
           Best Seller Product
         </h2>
-        <p>TODO</p>
+        <div className="grid grid-cols-4 gap-4">
+          {best.map((b) => (
+            <BestProduct key={b.id} best={b}></BestProduct>
+          ))}
+        </div>
       </section>
       {/* Section 3 */}
       <section className="py-20">
