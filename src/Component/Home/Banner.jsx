@@ -13,11 +13,11 @@ const Banner = () => {
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <img
-            className="bg-cover bg-center relative"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner5.jpg"
             alt=""
           />
-          <div className="absolute top-52 text-center text-white">
+          <div className="absolute top-36 text-center text-white">
             <p className="text-xl font-medium">Essential Accessories</p>
             <h1 className="text-7xl font-bold">Golden Charms</h1> <br />
             <div className="px-40">
@@ -37,11 +37,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner15.jpg"
             alt=""
           />
-          <div className="relative top-52 text-center text-black">
+          <div className="absolute top-36 text-center text-black">
             <p className="text-xl font-medium">Hot of the season</p>
             <h1 className="text-7xl font-bold">Jewelry Shop</h1> <br />
             <div className="px-40">
@@ -61,11 +61,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner16.jpg"
             alt=""
           />
-          <div className="relative top-52 text-center text-black">
+          <div className="absolute top-36 text-center text-black">
             <p className="text-xl font-medium">Ultimate ring models</p>
             <h1 className="text-7xl font-bold">Wedding Ring</h1> <br />
             <div className="px-40">
@@ -84,11 +84,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner14.jpg"
             alt=""
           />
-          <div className="absolute top-52 text-center text-white">
+          <div className="absolute top-36 text-center text-white">
             <p className="text-xl font-medium">Essential Accessories</p>
             <h1 className="text-7xl font-bold">Golden Charms</h1> <br />
             <div className="px-40">
@@ -108,11 +108,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner17.jpg"
             alt=""
           />
-          <div className="relative top-52 text-center text-white">
+          <div className="absolute top-36 text-center text-white">
             <p className="text-xl font-medium">Hot of the season</p>
             <h1 className="text-7xl font-bold">Jewelry Shop</h1> <br />
             <div className="px-40">
@@ -132,11 +132,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner1.jpg"
             alt=""
           />
-          <div className="relative top-52 text-center text-black">
+          <div className="absolute top-36 text-center text-black">
             <p className="text-xl font-medium">Ultimate ring models</p>
             <h1 className="text-7xl font-bold">Wedding Ring</h1> <br />
             <div className="px-40">
@@ -155,11 +155,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner10.jpg"
             alt=""
           />
-          <div className="relative top-52 text-center text-white">
+          <div className="absolute top-36 text-center text-white">
             <p className="text-xl font-medium">Essential Accessories</p>
             <h1 className="text-7xl font-bold">Golden Charms</h1> <br />
             <div className="px-40">
@@ -179,11 +179,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner6.jpg"
             alt=""
           />
-          <div className="relative top-52 text-center text-white">
+          <div className="absolute top-36 text-center text-white">
             <p className="text-xl font-medium">Ultimate ring models</p>
             <h1 className="text-7xl font-bold">Wedding Ring</h1> <br />
             <div className="px-40">
@@ -202,11 +202,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" absolute"
+            className="bg-cover w-screen max-h-screen bg-center relative"
             src="/src/assets/Image/Banner/banner8.jpg"
             alt=""
           />
-          <div className="relative top-52 text-center text-white">
+          <div className="absolute top-36 text-center text-white">
             <p className="text-xl font-medium">Hot of the season</p>
             <h1 className="text-7xl font-bold">Jewelry Shop</h1> <br />
             <div className="px-40">
