@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { authContext } from "../Provider/AuthProvider";
 
 const Registration = () => {
-  const { createUser } = useContext(authContext);
+  const { createUser, updateProfileData } = useContext(authContext);
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState([]);
   const [show, setShow] = useState(false);
@@ -38,16 +38,16 @@ const Registration = () => {
         setSuccess("Successfully Registered");
         setError("");
         updateProfileData(Name, image);
-        navigate("/");
-        fetch(`http://localhost:5000/users`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-          });
+        // navigate("/");
+        // fetch(`http://localhost:5000/users`, {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/json" },
+        //   body: JSON.stringify(data),
+        // })
+        //   .then((res) => res.json())
+        //   .then((data) => {
+        //     console.log(data);
+        //   });
       })
       .catch((error) => {
         const message = error.message;
@@ -69,6 +69,10 @@ const Registration = () => {
               onSubmit={handleSubmit(onSubmit)}
               className="card-body bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"
             >
+              <div>
+                <p className="text-green-400 text-sm">{success}</p>
+                <p className="text-red-500 text-sm">{error}</p>
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>

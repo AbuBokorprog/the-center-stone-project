@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { authContext } from "../Provider/AuthProvider";
 
 const Login = () => {
-  const { signInUser } = useContext(authContext);
+  const { signInUser, user, google } = useContext(authContext);
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState([]);
   const [show, setShow] = useState(false);
@@ -35,6 +35,17 @@ const Login = () => {
       });
   };
 
+  const googleSignIn = () => {
+    google()
+      .then((loggedUser) => {
+        const user = loggedUser.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <div className="py-20">
       <div className="hero min-h-screen">
@@ -48,11 +59,10 @@ const Login = () => {
               className="card-body bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"
             >
               <div>
-                <div>
-                  <p className="text-green-400 text-sm">{success}</p>
-                  <p className="text-red-500 text-sm">{error}</p>
-                </div>
+                <p className="text-green-400 text-sm">{success}</p>
+                <p className="text-red-500 text-sm">{error}</p>
               </div>
+
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -128,12 +138,14 @@ const Login = () => {
                   </Link>
                 </label>
               </div>
-              <div className="mx-auto">
-                <label className="label">
-                  <button className="btn">Google</button>
-                </label>
-              </div>
             </form>
+            <div className="mx-auto">
+              <label className="label">
+                <button onClick={googleSignIn} className="btn">
+                  Google
+                </button>
+              </label>
+            </div>
           </div>
         </div>
       </div>
