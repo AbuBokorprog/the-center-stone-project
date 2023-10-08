@@ -1,6 +1,11 @@
 import React, { createContext, useEffect, useState } from "react";
 import App from "../Firebase/Firebase.config";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 export const authContext = createContext(null);
 
@@ -13,20 +18,20 @@ const AuthProvider = ({ children }) => {
     setLoader(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  //   const signInUser = (email, password) => {
-  //     setLoader(true);
-  //     return signInWithEmailAndPassword(auth, email, password);
-  //   };
+  const signInUser = (email, password) => {
+    setLoader(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
-  //   useEffect(() => {
-  //     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //       setLoader(false);
-  //       setUser(currentUser);
-  //     });
-  //     return () => {
-  //       return unSubscribe();
-  //     };
-  //   }, []);
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setLoader(false);
+      setUser(currentUser);
+    });
+    return () => {
+      return unSubscribe();
+    };
+  }, []);
   //   const updateProfileData = async (Name, Image) => {
   //     setLoader(true);
   //     try {
@@ -44,6 +49,8 @@ const AuthProvider = ({ children }) => {
 
   const authInfo = {
     createUser,
+    signInUser,
+    user,
   };
 
   return (
