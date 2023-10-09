@@ -16,7 +16,7 @@ const Blogs = () => {
       <div className="mb-20">
         <img
           className="w-screen max-h-screen"
-          src="/public/Image/Banner/banner9.jpg"
+          src="/Image/Banner/banner9.jpg"
           alt=""
         />
       </div>

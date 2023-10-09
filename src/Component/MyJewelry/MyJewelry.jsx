@@ -20,8 +20,8 @@ const MyJewelry = () => {
   const myJewelry = jewelry.filter((j) => j.Email === email);
   // console.log(myJewelry);
   return (
-    <div className="mb-20">
-      <div className="mb-20">
+    <div className="mb-10 lg:mb-20">
+      <div className="mb-10 lg:mb-20">
         <img
           className="w-screen max-h-screen"
           src="/Image/Banner/banner2ring.jpg"
@@ -33,7 +33,7 @@ const MyJewelry = () => {
           My Jewelry {myJewelry.length}
         </h2>
       </div>
-      <div className="grid grid-cols-3 row-auto gap-4">
+      <div className="grid grid-cols-1 mx-auto lg:grid-cols-3 row-auto gap-4">
         {myJewelry.map((mj) => (
           <Jewelry key={mj._id} Jewelry={mj}></Jewelry>
         ))}

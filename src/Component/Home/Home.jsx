@@ -15,45 +15,45 @@ const Home = () => {
     <div>
       <Banner></Banner>
       {/* Best Seller Product */}
-      <section>
+      <section className="py-10 lg:py-20">
         <h2 className="text-center text-5xl pb-8 font-semibold">
           Best Seller Product
         </h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-1 px-1 lg:px-0 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {best.map((b) => (
             <BestProduct key={b.id} best={b}></BestProduct>
           ))}
         </div>
       </section>
       {/* Section 3 */}
-      <section className="py-20">
-        <div className="flex flex-row-reverse gap-10 justify-center items-center">
-          <div className="grid grid-cols-2 w-1/2 gap-2">
+      <section className="py-10 lg:py-20">
+        <div className="lg:flex lg:flex-row-reverse gap-10 justify-center items-center">
+          <div className="grid grid-cols-2 lg:w-1/2 gap-2 px-1 lg:px-0">
             <div>
               <img
-                className="w-72 rounded-s-xl"
+                className="lg:w-72 rounded-s-xl"
                 src="/Image/pexels-manuel-gamboa-14559459.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
-                className="w-72 rounded-e-xl"
+                className="lg:w-72 rounded-e-xl"
                 src="/Image/pexels-kate-photo-1028927.jpg"
                 alt=""
               />
             </div>
           </div>
-          <div className="w-1/2 text-right">
-            <h3 className="text-6xl font-bold">
+          <div className="lg:w-1/2 px-2 lg:px-0 lg:text-right">
+            <h3 className="text-3xl lg:text-6xl font-bold">
               Perfect Match for Every Occasion
             </h3>
-            <p className="font-semibold py-4 text-4xl">
+            <p className="font-semibold py-1 lg:py-4 text-xl lg:text-4xl">
               coordinate with other pieces from the collection for a classic
               look.
             </p>
             <div className="mx-auto text-center">
-              <button className="btn btn-error bg-red-600 px-10">
+              <button className="btn btn-error bg-red-600 lg:px-10">
                 Discover More
               </button>
             </div>
@@ -61,8 +61,8 @@ const Home = () => {
         </div>
       </section>
       {/* Collection */}
-      <section className="py-20">
-        <div className="px-40">
+      <section className="py-10 lg:py-20">
+        <div className="px-5 lg:px-40">
           <h2 className="text-center text-5xl pb-2 font-semibold">
             Collection
           </h2>
@@ -72,7 +72,7 @@ const Home = () => {
             our wonderful tales…
           </p>
         </div>
-        <div className="grid grid-cols-4 grid-rows-2 gap-4">
+        <div className="grid sm:grid-cols-2 px-1 lg:px-0 lg:grid-cols-4 lg:grid-rows-2 gap-4">
           <div className="">
             <img src="/Image/pexels-湉双-陈-2876035.jpg" alt="" />
           </div>
@@ -102,7 +102,7 @@ const Home = () => {
       </section>
       {/* Meet People */}
       <section className="py-20">
-        <div className="text-center px-40 pb-5">
+        <div className="text-center lg:px-40 pb-5">
           <p className="text-sm font-medium pb-1 font-serif italic">
             TEAM MEMBERS
           </p>
@@ -110,14 +110,14 @@ const Home = () => {
             Meet <span className="italic">the</span> People
           </h2>
           <hr className="border-2 border-black rounded-xl" />
-          <p className="font-medium py-2">
+          <p className="font-medium py-2 px-5 lg:px-0">
             At The Center Stone, we believe that every piece of jewelry tells a
             unique story. Behind each exquisite creation is a team of passionate
             and skilled individuals who pour their heart and soul into crafting
             timeless treasures for you.
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid lg:grid-cols-4 gap-5 px-1 lg:px-0">
           <div>
             <img src="/Image/owner.jpg" alt="" />
             <div className="text-center">

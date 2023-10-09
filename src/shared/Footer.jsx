@@ -3,20 +3,20 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer sm:p-4 lg:p-10 bg-base-200 text-base-content">
         <form>
           <header className="footer-title">Newsletter</header>
-          <fieldset className="form-control w-80">
+          <fieldset className="form-control lg:w-80">
             <label className="label">
               <span className="label-text">Enter your email address</span>
             </label>
-            <div className="relative">
+            <div className="lg:relative">
               <input
                 type="text"
                 placeholder="username@site.com"
-                className="input input-bordered w-full pr-16"
+                className="input input-bordered w-full lg:pr-16"
               />
-              <button className="btn btn-error bg-red-600 absolute top-0 right-0 rounded-l-none">
+              <button className="btn btn-error bg-red-600 lg:absolute lg:top-0 lg:right-0 rounded-l-none">
                 Subscribe
               </button>
             </div>

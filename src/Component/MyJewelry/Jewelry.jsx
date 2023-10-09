@@ -6,7 +6,7 @@ const Jewelry = (props) => {
     props.Jewelry;
   return (
     <div>
-      <div className="card card-compact w-80 bg-base-100 shadow-xl">
+      <div className="card card-compact w-fit px-1 lg:px-0 lg:w-80 bg-base-100 shadow-xl">
         <figure>
           <img className="h-80 w-fit" src={image} alt={title} />
         </figure>

@@ -7,7 +7,7 @@ const Jewelry = (props) => {
   const popular = popularity;
   return (
     <div>
-      <div className="card w-80 bg-base-100 shadow-xl">
+      <div className="card mx-auto w-fit px-1 lg:px-0 lg:w-80 bg-base-100 shadow-xl">
         <figure>
           <img className="h-80 w-fit" src={image} alt={title} />
         </figure>

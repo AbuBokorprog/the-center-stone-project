@@ -34,7 +34,7 @@ const AddJewelry = () => {
 
   return (
     <div>
-      <div className="mb-20">
+      <div className="mb-10 lg:mb-20">
         <img
           className="w-screen max-h-screen"
           src="/src/assets/Image/Banner/banner11ring.jpg"
@@ -43,7 +43,7 @@ const AddJewelry = () => {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="card-body px-52 font-medium"
+        className="card-body lg:px-52 font-medium"
       >
         <h2 className="text-5xl text-center font-semibold">Add Jewelry</h2>
 
@@ -60,7 +60,7 @@ const AddJewelry = () => {
           />
           {errors.title && <span>This field is required</span>}
         </div>
-        <div className="flex gap-5 justify-between items-center">
+        <div className="lg:flex gap-5 justify-between items-center">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Maker Name</span>

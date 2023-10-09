@@ -56,30 +56,30 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <img className="w-32" src="/Image/logo (2).png" alt="" />
-          <Link to="/" className="normal-case text-xl">
+          <img className="w-20 lg:w-32" src="/Image/logo (2).png" alt="" />
+          <Link to="/" className="lg:normal-case lg:visible text-sm lg:text-xl">
             The Center Stone
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold">
             <li>
-              <Link to="/" className="ps-5">
+              <Link to="/" className="">
                 Home
               </Link>
             </li>
             <li>
-              <Link className="ps-5" to="allJewelry">
+              <Link className="" to="allJewelry">
                 All Jewelry
               </Link>
             </li>
             <li>
-              <Link className="ps-5" to="myJewelry">
+              <Link className="" to="myJewelry">
                 My Jewelry
               </Link>
             </li>
             <li>
-              <Link className="ps-5" to="addJewelry">
+              <Link className="" to="addJewelry">
                 Add Jewelry
               </Link>
             </li>
@@ -91,7 +91,7 @@ const Navbar = () => {
               ""
             )}
             <li>
-              <Link className="ps-5" to="blogs">
+              <Link className="" to="blogs">
                 Blogs
               </Link>
             </li>

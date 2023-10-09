@@ -9,7 +9,7 @@ const BestProduct = (props) => {
     <div>
       <div className="card card-compact w-96z bg-base-100 shadow-xl">
         <figure>
-          <img className="h-80 w-fit" src={image} alt="Shoes" />
+          <img className="lg:h-fit w-fit" src={image} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
