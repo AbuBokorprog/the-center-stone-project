@@ -5,7 +5,7 @@ import BestProduct from "./BestProduct";
 const Home = () => {
   const [best, setBest] = useState([]);
   useEffect(() => {
-    fetch(`/public/bestProduct.json`)
+    fetch(`/bestProduct.json`)
       .then((res) => res.json())
       .then((data) => {
         setBest(data);
@@ -32,14 +32,14 @@ const Home = () => {
             <div>
               <img
                 className="w-72 rounded-s-xl"
-                src="/src/assets/Image/pexels-manuel-gamboa-14559459.jpg"
+                src="/Image/pexels-manuel-gamboa-14559459.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
                 className="w-72 rounded-e-xl"
-                src="/src/assets/Image/pexels-kate-photo-1028927.jpg"
+                src="/Image/pexels-kate-photo-1028927.jpg"
                 alt=""
               />
             </div>
@@ -74,47 +74,29 @@ const Home = () => {
         </div>
         <div className="grid grid-cols-4 grid-rows-2 gap-4">
           <div className="">
-            <img src="/src/assets/Image/pexels-湉双-陈-2876035.jpg" alt="" />
+            <img src="/Image/pexels-湉双-陈-2876035.jpg" alt="" />
           </div>
           <div>
-            <img
-              src="/src/assets/Image/cat-han-7EaQT4M8aFc-unsplash.jpg"
-              alt=""
-            />
+            <img src="/Image/cat-han-7EaQT4M8aFc-unsplash.jpg" alt="" />
           </div>
           <div>
-            <img
-              src="/src/assets/Image/cat-han-BJ3grTerqY4-unsplash.jpg"
-              alt=""
-            />
+            <img src="/Image/cat-han-BJ3grTerqY4-unsplash.jpg" alt="" />
           </div>
           <div>
-            <img
-              src="/src/assets/Image/cat-han-gNMuWRsRVEU-unsplash.jpg"
-              alt=""
-            />
+            <img src="/Image/cat-han-gNMuWRsRVEU-unsplash.jpg" alt="" />
           </div>
           <div>
-            <img src="/src/assets/Image/pexels-redwolf-14030660.jpg" alt="" />
+            <img src="/Image/pexels-redwolf-14030660.jpg" alt="" />
           </div>
           <div>
-            <img
-              src="/src/assets/Image/pexels-arsham-haghani-3387577.jpg"
-              alt=""
-            />
+            <img src="/Image/pexels-arsham-haghani-3387577.jpg" alt="" />
           </div>
           <div>
-            <img
-              src="/src/assets/Image/sour-moha-k47viB7Dt8I-unsplash.jpg"
-              alt=""
-            />
+            <img src="/Image/sour-moha-k47viB7Dt8I-unsplash.jpg" alt="" />
           </div>
 
           <div>
-            <img
-              src="/src/assets/Image/sama-hosseini-6seIjO8gX2w-unsplash.jpg"
-              alt=""
-            />
+            <img src="/Image/sama-hosseini-6seIjO8gX2w-unsplash.jpg" alt="" />
           </div>
         </div>
       </section>
@@ -137,28 +119,28 @@ const Home = () => {
         </div>
         <div className="grid grid-cols-4 gap-5">
           <div>
-            <img src="/src/assets/Image/owner.jpg" alt="" />
+            <img src="/Image/owner.jpg" alt="" />
             <div className="text-center">
               <h4 className="text-4xl">Michael</h4>
               <p>Owner</p>
             </div>
           </div>
           <div>
-            <img src="/src/assets/Image/product-manager.jpg" alt="" />
+            <img src="/Image/product-manager.jpg" alt="" />
             <div className="text-center">
               <h4 className="text-4xl">Isabella</h4>
               <p>Product Manager</p>
             </div>
           </div>
           <div>
-            <img src="/src/assets/Image/makeup-artist.jpg" alt="" />
+            <img src="/Image/makeup-artist.jpg" alt="" />
             <div className="text-center">
               <h4 className="text-4xl">Olivia</h4>
               <p>Make up artist</p>
             </div>
           </div>
           <div>
-            <img src="/src/assets/Image/photograper.jpg" alt="" />
+            <img src="/Image/photograper.jpg" alt="" />
             <div className="text-center">
               <h4 className="text-4xl">Thomas</h4>
               <p>Photographer</p>

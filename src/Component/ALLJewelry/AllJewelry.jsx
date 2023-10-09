@@ -18,7 +18,7 @@ const AllJewelry = () => {
       <div className="pb-20">
         <img
           className="w-screen max-h-screen"
-          src="/src/assets/Image/Banner/bannerring3.jpg"
+          src="/Image/Banner/bannerring3.jpg"
           alt=""
         />
       </div>

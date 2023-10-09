@@ -14,7 +14,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner5.jpg"
+            src="/Image/Banner/banner5.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-white">
@@ -38,7 +38,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner15.jpg"
+            src="/Image/Banner/banner15.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-black">
@@ -62,7 +62,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner16.jpg"
+            src="/Image/Banner/banner16.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-black">
@@ -85,7 +85,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner14.jpg"
+            src="/Image/Banner/banner14.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-white">
@@ -109,7 +109,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner17.jpg"
+            src="/Image/Banner/banner17.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-white">
@@ -133,7 +133,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner1.jpg"
+            src="/Image/Banner/banner1.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-black">
@@ -156,7 +156,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner10.jpg"
+            src="/Image/Banner/banner10.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-white">
@@ -180,7 +180,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner6.jpg"
+            src="/Image/Banner/banner6.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-white">
@@ -203,7 +203,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className="bg-cover w-screen max-h-screen bg-center relative"
-            src="/src/assets/Image/Banner/banner8.jpg"
+            src="/Image/Banner/banner8.jpg"
             alt=""
           />
           <div className="absolute top-36 text-center text-white">
