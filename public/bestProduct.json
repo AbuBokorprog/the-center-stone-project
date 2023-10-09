@@ -64,7 +64,7 @@
   },
   {
     "title": "Gold Hoop Earrings",
-    "id": 6,
+    "id": 8,
     "image": "https://images.unsplash.com/photo-1600721391776-b5cd0e0048f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8R29sZCUyMEVhcnJpbmdzfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
     "cost": "$450",
     "selling_number": 135,
@@ -73,7 +73,7 @@
   },
   {
     "title": "Silver Heart Locket Necklace",
-    "id": 10,
+    "id": 9,
     "image": "https://images.unsplash.com/photo-1676485261309-784d67817972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2lsdmVyJTIwSGVhcnQlMjBMb2NrZXQlMjBOZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$550",
     "selling_number": 95,
@@ -82,7 +82,7 @@
   },
   {
     "title": "Rose Gold Engagement Ring",
-    "id": 3,
+    "id": 10,
     "image": "https://images.unsplash.com/photo-1575343661961-396d02abf317?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Um9zZSUyMEdvbGQlMjBFbmdhZ2VtZW50JTIwUmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$2,500",
     "selling_number": 78,

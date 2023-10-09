@@ -6,12 +6,13 @@ import Main from "./Layout/Main";
 import ErrorPage from "./Component/ErrorPage";
 import Home from "./Component/Home/Home";
 import AllJewelry from "./Component/ALLJewelry/AllJewelry";
-import MyJewelry from "./Component/MyJewelry";
 import AddJewelry from "./Component/AddJewelry";
-import Blogs from "./Component/Blogs";
+import Blogs from "./Component/Blogs/Blogs";
 import Login from "./Component/Login";
 import Registration from "./Component/Registration";
 import AuthProvider from "./Provider/AuthProvider";
+import MyJewelry from "./Component/MyJewelry/MyJewelry";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -29,11 +30,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/myJewelry",
-        element: <MyJewelry></MyJewelry>,
+        element: (
+          <PrivateRoute>
+            <MyJewelry></MyJewelry>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/addJewelry",
-        element: <AddJewelry></AddJewelry>,
+        element: (
+          <PrivateRoute>
+            <AddJewelry></AddJewelry>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blogs",

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const BestProduct = (props) => {
-  console.log(props.best);
+  // console.log(props.best);
   //console.log(best);
   const { title, image, id, cost, selling_number, popularity, maker_Name } =
     props.best;

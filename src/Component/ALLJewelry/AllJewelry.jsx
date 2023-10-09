@@ -4,7 +4,9 @@ import Jewelry from "./Jewelry";
 const AllJewelry = () => {
   const [jewelries, setJewelries] = useState([]);
   useEffect(() => {
-    fetch("/public/AllProduct.json")
+    fetch(
+      "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/jewelry"
+    )
       .then((res) => res.json())
       .then((data) => {
         setJewelries(data);
@@ -31,7 +33,7 @@ const AllJewelry = () => {
       </div>
       <div className="grid grid-cols-3 row-auto gap-4">
         {jewelries.map((j) => (
-          <Jewelry key={j.Id} jewelry={j}></Jewelry>
+          <Jewelry key={j._id} jewelry={j}></Jewelry>
         ))}
       </div>
     </div>
