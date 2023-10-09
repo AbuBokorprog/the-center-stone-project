@@ -26,7 +26,8 @@ const Registration = () => {
     const password = data.password;
     const Name = data.Name;
     const image = data.image;
-    console.log(email, password, Name, image);
+    //console.log(email, password, Name, image);
+    //const user = { Name, email };
     if (password !== data.confirm_password) {
       setError("Passwords do not match");
       return;
@@ -39,15 +40,15 @@ const Registration = () => {
         setError("");
         updateProfileData(Name, image);
         // navigate("/");
-        // fetch(`http://localhost:5000/users`, {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/json" },
-        //   body: JSON.stringify(data),
-        // })
-        //   .then((res) => res.json())
-        //   .then((data) => {
-        //     console.log(data);
-        //   });
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
       })
       .catch((error) => {
         const message = error.message;

@@ -3,13 +3,13 @@ import App from "../Firebase/Firebase.config";
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
-  getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 export const authContext = createContext(null);
 
