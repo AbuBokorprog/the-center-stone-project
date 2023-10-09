@@ -83,6 +83,13 @@ const Navbar = () => {
                 Add Jewelry
               </Link>
             </li>
+            {user?.email ? (
+              <li>
+                <Link to="dashboard">Dashboard</Link>
+              </li>
+            ) : (
+              ""
+            )}
             <li>
               <Link className="ps-5" to="blogs">
                 Blogs

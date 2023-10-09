@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 import { authContext } from "../Provider/AuthProvider";
 import { Navigate } from "react-router-dom";
 
-const PrivateRoute = () => {
+const PrivateRoute = ({ children }) => {
   const { user, loader } = useContext(authContext);
+  // console.log(user?.email);
   if (user?.email) {
     return children;
   }

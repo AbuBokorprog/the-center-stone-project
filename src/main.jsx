@@ -13,6 +13,9 @@ import Registration from "./Component/Registration";
 import AuthProvider from "./Provider/AuthProvider";
 import MyJewelry from "./Component/MyJewelry/MyJewelry";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import Dashboard from "./Layout/Dashboard";
+import AllUsers from "./Component/Dashboard/AllUsers/AllUsers";
+import ManageProduct from "./Component/Dashboard/ManageProduct/ManageProduct";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +58,20 @@ const router = createBrowserRouter([
       {
         path: "/registration",
         element: <Registration></Registration>,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "allUsers",
+        element: <AllUsers></AllUsers>,
+      },
+      {
+        path: "manageClasses",
+        element: <ManageProduct></ManageProduct>,
       },
     ],
   },
