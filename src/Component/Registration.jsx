@@ -40,11 +40,14 @@ const Registration = () => {
         setError("");
         updateProfileData(Name, image);
         // navigate("/");
-        fetch("http://localhost:5000/users", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        })
+        fetch(
+          "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/users",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import User from "./User";
 
 const AllUsers = () => {
-  const [alluser, setAllUser] = useState([]);
+  const [allUser, setAllUser] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -24,14 +24,15 @@ const AllUsers = () => {
           {/* head */}
           <thead>
             <tr>
+              <th>No</th>
               <th>Image</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Status</th>
+              <th>Role</th>
             </tr>
           </thead>
-          {alluser.map((u) => (
-            <User key={u._id} user={u} id={1 + 1}></User>
+          {allUser.map((u, index) => (
+            <User key={u._id} user={u} index={index + 1}></User>
           ))}
         </table>
       </div>

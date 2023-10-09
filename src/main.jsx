@@ -16,6 +16,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Dashboard from "./Layout/Dashboard";
 import AllUsers from "./Component/Dashboard/AllUsers/AllUsers";
 import ManageProduct from "./Component/Dashboard/ManageProduct/ManageProduct";
+import Selectedproduct from "./Component/Dashboard/SelectedProduct/Selectedproduct";
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "manageClasses",
         element: <ManageProduct></ManageProduct>,
+      },
+      {
+        path: "mySelectedProduct",
+        element: <Selectedproduct></Selectedproduct>,
       },
     ],
   },

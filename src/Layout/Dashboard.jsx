@@ -1,10 +1,26 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AuthProvider, { authContext } from "../Provider/AuthProvider";
 import { FaHome, FaUsers } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
+  const [users, setUsers] = useState([]);
   const { user, logout } = useContext(authContext);
+  // console.log(user, users);
+
+  useEffect(() => {
+    fetch(
+      "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/users"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data);
+      });
+  }, []);
+
+  const oneUser = users.find((u) => u.email == user?.email);
+  // console.log(oneUser);
+
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -27,74 +43,11 @@ const Dashboard = () => {
                 The Center Stone
               </h2>
             </div>
-            <li className="">
-              <Link>
-                <FaHome></FaHome>Admin Home
-              </Link>
-            </li>
-            <li>
-              <Link className="" to="manageClasses">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-                Manage Product
-              </Link>
-            </li>
-            <li>
-              <Link to="allUsers">
-                <FaUsers />
-                ALL Users
-              </Link>
-            </li>
-            {/* {loggedUser?.role === "Instructor" ? (
-              <>
-                <li>
-                  <Link>
-                    <FaHome></FaHome>Instructor Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="addClass">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 4.5v15m7.5-7.5h-15"
-                      />
-                    </svg>
-                    Add A Class
-                  </Link>
-                </li>
-                <li>
-                  <Link to="myClass">
-                    <img src={learning} className="w-10" alt="" />
-                    My Classes
-                  </Link>
-                </li>
-              </>
-            ) : loggedUser?.role === "admin" ? (
+            {oneUser?.Role ? (
               <>
                 <li className="">
                   <Link>
-                    <FaHome></FaHome>Admin Home
+                    <FaHome></FaHome>Owner Home
                   </Link>
                 </li>
                 <li>
@@ -113,7 +66,7 @@ const Dashboard = () => {
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                       />
                     </svg>
-                    Manage Classes
+                    Manage Product
                   </Link>
                 </li>
                 <li>
@@ -126,34 +79,26 @@ const Dashboard = () => {
             ) : (
               <>
                 <li>
-                  <Link>Student Home</Link>
+                  <Link>Client Home</Link>
                 </li>
                 <li>
-                  <Link to="mySelectedClass">
+                  <Link to="mySelectedProduct">
                     <span>
-                      <img src={presentation} alt="" className="w-10" />
+                      <img src="" alt="" className="w-10" />
                     </span>
-                    My Selected Classes
-                  </Link>
-                </li>
-                <li>
-                  <Link to="enrolledClass">
-                    <span>
-                      <img src={learning} alt="" className="w-10" />
-                    </span>
-                    My Enrolled Classes
+                    My Selected Product
                   </Link>
                 </li>
                 <li>
                   <Link to="paymentHistory">
                     <span>
-                      <img src={bank} alt="" className="w-10" />
+                      <img src="" alt="" className="w-10" />
                     </span>
                     Payment History
                   </Link>
                 </li>
-              </> */}
-            {/* )} */}
+              </>
+            )}
             {/* default section */}
             <div className="divider"></div>
             <li>

@@ -40,6 +40,18 @@ const Login = () => {
       .then((loggedUser) => {
         const user = loggedUser.user;
         console.log(user);
+        fetch(
+          "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/users",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user),
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
       })
       .catch((error) => {
         console.log(error.message);
