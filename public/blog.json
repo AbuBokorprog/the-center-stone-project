@@ -1,32 +1,37 @@
 [
   {
     "Id": 1,
-    "Description": "Discover the Art of Custom Jewelry Design. Explore the journey of turning your dream jewelry piece into reality, guided by our expert artisans.",
-    "Image": "https://example.com/images/blog1.jpg",
+    "Title": "The Art of Custom Jewelry Design",
+    "Description": "Discover the journey of turning your dream jewelry piece into reality, guided by our expert artisans.",
+    "Image": "https://media.istockphoto.com/id/1165770278/photo/engineer-constructor-designer-architect-in-glasses-working-on-a-personal-computer-he-creating.webp?b=1&s=170667a&w=0&k=20&c=RpDF0ECOMaG2LZZ7HrvKvRlOyrmMzQYRaH5p0-BzJic=",
     "Writer": "Anna Smith"
   },
   {
     "Id": 2,
-    "Description": "The Magic of Gemstones: A Guide to Choosing the Perfect Stone for Your Jewelry. Learn about the symbolism and characteristics of gemstones that make your jewelry special.",
-    "Image": "https://example.com/images/blog2.jpg",
+    "Title": "Choosing the Perfect Gemstone for Your Jewelry",
+    "Description": "Learn about the symbolism and characteristics of gemstones that make your jewelry special.",
+    "Image": "https://media.istockphoto.com/id/1403525183/photo/chain-shape-golden-modern-bracelet-and-ring-on-white-podium-with-copy-space.webp?b=1&s=170667a&w=0&k=20&c=o5rgur_ACNkzarWkrKhW_aGDXbafuHrhfQhPuddAcSk=",
     "Writer": "David Johnson"
   },
   {
     "Id": 3,
-    "Description": "The Timeless Elegance of Vintage Jewelry. Dive into the world of vintage and antique jewelry, where each piece holds a unique history and charm.",
-    "Image": "https://example.com/images/blog3.jpg",
+    "Title": "The Timeless Elegance of Vintage Jewelry",
+    "Description": "Dive into the world of vintage and antique jewelry, where each piece holds a unique history and charm.",
+    "Image": "https://media.istockphoto.com/id/1016611260/photo/beautiful-senior-boho-stylish-woman.webp?b=1&s=170667a&w=0&k=20&c=dYzsOBMvrca6F5h2kKKHPLI_iKJbfXVGr3vtFGfe0mI=",
     "Writer": "Emily Turner"
   },
   {
     "Id": 4,
-    "Description": "Caring for Your Precious Gems: Tips for Jewelry Maintenance. Learn how to keep your jewelry looking stunning for generations with our maintenance guide.",
-    "Image": "https://example.com/images/blog4.jpg",
+    "Title": "Tips for Jewelry Maintenance: Caring for Your Precious Gems",
+    "Description": "Learn how to keep your jewelry looking stunning for generations with our maintenance guide.",
+    "Image": "https://media.istockphoto.com/id/1222335712/photo/blue-sapphir-on-black-coal-background.webp?b=1&s=170667a&w=0&k=20&c=0jsnaF90igP-aDxtuwCDteztL8xPyLRZWfecoOU6hic=",
     "Writer": "Michael Brown"
   },
   {
     "Id": 5,
-    "Description": "The Beauty of Handcrafted Jewelry: Artistry and Passion Combined. Discover the craftsmanship and dedication that goes into creating our handcrafted jewelry.",
-    "Image": "https://example.com/images/blog5.jpg",
+    "Title": "The Beauty of Handcrafted Jewelry",
+    "Description": "Discover the craftsmanship and dedication that goes into creating our handcrafted jewelry.",
+    "Image": "https://images.unsplash.com/photo-1583914237584-99f86f0e5cf2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8SGFuZGNyYWZ0ZWQlMjBKZXdlbHJ5fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
     "Writer": "Sophia Martinez"
   }
 ]
