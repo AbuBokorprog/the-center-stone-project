@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm, useWatch } from "react-hook-form";
+import { authContext } from "../Provider/AuthProvider";
 
 const AddJewelry = () => {
+  const { user } = useContext(authContext);
+  // console.log(user?.displayName);
   const {
     register,
     handleSubmit,
@@ -18,6 +21,15 @@ const AddJewelry = () => {
     const maker_Name = data.Name;
     const maker_Email = data.Email;
     console.log(title, image, cost, maker_Name, maker_Email);
+    fetch("http://localhost:5000/jewelry", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
@@ -56,6 +68,7 @@ const AddJewelry = () => {
             <input
               type="text"
               placeholder="Type your maker name"
+              defaultValue={user?.displayName}
               {...register("Name", { required: true })}
               className="input input-bordered pe-20 border-red-600 input-lg"
               required
@@ -68,6 +81,7 @@ const AddJewelry = () => {
             </label>
             <input
               type="email"
+              defaultValue={user?.email}
               placeholder="Type your maker email"
               {...register("Email", { required: true })}
               className="input input-bordered pe-20 border-red-600 input-lg"
