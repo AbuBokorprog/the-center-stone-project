@@ -20,7 +20,7 @@ const Home = () => {
           Best Seller Product
         </h2>
         <div className="grid sm:grid-cols-1 px-1 lg:px-0 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {best.map((b) => (
+          {best.slice(0, 8).map((b) => (
             <BestProduct key={b.id} best={b}></BestProduct>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useForm, useWatch } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { authContext } from "../Provider/AuthProvider";
@@ -21,33 +21,28 @@ const Registration = () => {
 
   const onSubmit = (data) => {
     reset();
-
     const email = data.email;
     const password = data.password;
-    const Name = data.Name;
+    const name = data.name;
     const image = data.image;
-    //console.log(email, password, Name, image);
-    //const user = { Name, email };
     if (password !== data.confirm_password) {
       setError("Passwords do not match");
       return;
     }
+
     createUser(email, password)
       .then((loggedUser) => {
         const user = loggedUser.user;
         console.log(user);
         setSuccess("Successfully Registered");
         setError("");
-        updateProfileData(Name, image);
-        // navigate("/");
-        fetch(
-          "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/users",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-          }
-        )
+        updateProfileData(name, image);
+        // Navigate("/login");
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -84,7 +79,7 @@ const Registration = () => {
                 <input
                   type="text"
                   placeholder="Type Your Name"
-                  {...register("Name", { required: true })}
+                  {...register("name", { required: true })}
                   className="input input-bordered border-red-600"
                   required
                 />
@@ -115,7 +110,6 @@ const Registration = () => {
                     required: true,
                     minLength: 6,
                     maxLength: 20,
-                    pattern: /(?=.*[A-Z])(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]/,
                   })}
                   className="input input-bordered border-red-600"
                   required

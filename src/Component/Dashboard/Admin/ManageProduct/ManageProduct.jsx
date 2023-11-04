@@ -2,7 +2,7 @@ import React from "react";
 
 const ManageProduct = () => {
   return (
-    <div>
+    <div className="h-full w-full">
       <p className="text-5xl">TODO</p>
     </div>
   );

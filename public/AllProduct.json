@@ -1,172 +1,143 @@
 [
   {
     "title": "Elegant Diamond Necklace",
-    "Id": 1,
     "image": "https://images.unsplash.com/photo-1598560917505-59a3ad559071?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80",
     "cost": "$1,200",
     "selling_number": 125,
-    "maker_Name": "Aria Jewelry",
-    "popularity": "High"
+    "maker_Name": "Aria Jewelry"
   },
   {
     "title": "Sapphire and Diamond Earrings",
-    "Id": 2,
     "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2FwcGhpcmUlMjBhbmQlMjBEaWFtb25kJTIwRWFycmluZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$850",
     "selling_number": 90,
-    "maker_Name": "GemCraft Creations",
-    "popularity": "Moderate"
+    "maker_Name": "GemCraft Creations"
   },
   {
     "title": "Ruby and Diamond Bracelet",
-    "Id": 3,
     "image": "https://images.unsplash.com/photo-1676296227404-9a7c32bb826d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fFJ1YnklMjBhbmQlMjBEaWFtb25kJTIwQnJhY2VsZXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$1,650",
     "selling_number": 103,
-    "maker_Name": "Radiant Gems",
-    "popularity": "High"
+    "maker_Name": "Radiant Gems"
   },
   {
     "title": "Pearl and Crystal Bracelet",
-    "Id": 4,
     "image": "https://plus.unsplash.com/premium_photo-1681276168324-a6f1958aa191?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UGVhcmwlMjBCcmFjZWxldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$350",
     "selling_number": 110,
-    "maker_Name": "Ocean Gems",
-    "popularity": "Moderate"
+    "maker_Name": "Ocean Gems"
   },
   {
     "title": "Silver Heart Locket Necklace",
-    "Id": 5,
     "image": "https://images.unsplash.com/photo-1676485261309-784d67817972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2lsdmVyJTIwSGVhcnQlMjBMb2NrZXQlMjBOZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$550",
     "selling_number": 95,
-    "maker_Name": "Silver Elegance",
-    "popularity": "Moderate"
+    "maker_Name": "Silver Elegance"
   },
   {
     "title": "Emerald Pendant Necklace",
-    "Id": 6,
     "image": "https://images.unsplash.com/photo-1685970731850-322fbd92c898?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RW1lcmFsZCUyMFBlbmRhbnQlMjBOZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$1,800",
     "selling_number": 64,
-    "maker_Name": "Emerald Dreams Jewelry",
-    "popularity": "Low"
+    "Name": "Emerald Dreams Jewelry"
   },
   {
     "title": "Sapphire and Diamond Ring",
-    "Id": 7,
     "image": "https://images.unsplash.com/photo-1561995975-a23cdb019dce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fFNhcHBoaXJlJTIwYW5kJTIwRGlhbW9uZCUyMFJpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$2,300",
     "selling_number": 72,
-    "maker_Name": "GemCraft Creations",
-    "popularity": "Moderate"
+    "Name": "GemCraft Creations"
   },
   {
     "title": "Gold Hoop Earrings",
-    "Id": 8,
     "image": "https://images.unsplash.com/photo-1600721391776-b5cd0e0048f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8R29sZCUyMEVhcnJpbmdzfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
     "cost": "$450",
     "selling_number": 135,
-    "maker_Name": "Golden Touch Designs",
-    "popularity": "High"
+    "Name": "Golden Touch Designs"
   },
   {
     "title": "Silver Heart Locket Necklace",
-    "Id": 9,
     "image": "https://images.unsplash.com/photo-1676485261309-784d67817972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2lsdmVyJTIwSGVhcnQlMjBMb2NrZXQlMjBOZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$550",
     "selling_number": 95,
-    "maker_Name": "Silver Elegance",
-    "popularity": "Moderate"
+    "Name": "Silver Elegance"
   },
   {
     "title": "Rose Gold Engagement Ring",
-    "Id": 10,
+
     "image": "https://images.unsplash.com/photo-1575343661961-396d02abf317?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Um9zZSUyMEdvbGQlMjBFbmdhZ2VtZW50JTIwUmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$2,500",
     "selling_number": 78,
-    "maker_Name": "Luxury Rings Co.",
-    "popularity": "High"
+    "Name": "Luxury Rings Co."
   },
   {
-    "Id": 11,
     "title": "Diamond Tennis Bracelet",
     "image": "https://plus.unsplash.com/premium_photo-1681276169903-83b87f1cbf19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fERpYW1vbmQlMjBUZW5uaXMlMjBCcmFjZWxldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$2,850",
     "selling_number": 58,
-    "maker_Name": "Diamond Elegance"
+    "Name": "Diamond Elegance"
   },
   {
-    "Id": 12,
     "title": "Sapphire Cluster Earrings",
     "image": "https://images.unsplash.com/photo-1608613381851-6a058de0dc11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFNhcHBoaXJlJTIwQ2x1c3RlciUyMEVhcnJpbmdzfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
     "cost": "$950",
     "selling_number": 72,
-    "maker_Name": "Sapphire Dreams"
+    "Name": "Sapphire Dreams"
   },
   {
-    "Id": 13,
     "title": "White Gold Wedding Ring",
     "image": "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$3,200",
     "selling_number": 45,
-    "maker_Name": "Eternal Bands"
+    "Name": "Eternal Bands"
   },
   {
-    "Id": 14,
     "title": "Emerald and Diamond Pendant",
     "image": "https://images.unsplash.com/photo-1574814073364-e865c9b6a3a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVuZGFudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$1,450",
     "selling_number": 62,
-    "maker_Name": "Green Gem Creations"
+    "Name": "Green Gem Creations"
   },
   {
-    "Id": 15,
     "title": "Silver Infinity Necklace",
     "image": "https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U2lsdmVyJTIwSW5maW5pdHklMjBOZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$380",
     "selling_number": 88,
-    "maker_Name": "Infinity Jewels"
+    "Name": "Infinity Jewels"
   },
   {
-    "Id": 16,
     "title": "Amethyst and Topaz Ring",
     "image": "https://images.unsplash.com/photo-1603561596973-8166e9e089d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QW1ldGh5c3QlMjByaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
     "cost": "$1,100",
     "selling_number": 40,
-    "maker_Name": "Gemstone Treasures"
+    "Name": "Gemstone Treasures"
   },
   {
-    "Id": 17,
     "title": "Gold Filigree Earrings",
     "image": "https://media.istockphoto.com/id/863215146/photo/silver-and-gold-earrings-with-filigree-traditional-jewelry-of-filigrana.webp?b=1&s=170667a&w=0&k=20&c=0z2TwLr9NdGcD-o0JqtLGj8E2Ut0PAa9IqxTKaASApo=",
     "cost": "$650",
     "selling_number": 75,
-    "maker_Name": "Golden Elegance"
+    "Name": "Golden Elegance"
   },
   {
-    "Id": 18,
     "title": "Pearl Choker Necklace",
     "image": "https://media.istockphoto.com/id/1453838589/photo/beautiful-shell-oyster-empty-with-pearls.webp?b=1&s=170667a&w=0&k=20&c=eFm0fnwPxgd8GdAEREGhwAVbeEilHOXVGejXXenkJqY=",
     "cost": "$480",
     "selling_number": 92,
-    "maker_Name": "Pearl Loom"
+    "Name": "Pearl Loom"
   },
   {
-    "Id": 19,
     "title": "Opal and Diamond Pendant",
     "image": "https://images.unsplash.com/photo-1684616291057-13e530e71885?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fE9wYWwlMjBhbmQlMjBEaWFtb25kJTIwUGVuZGFudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
     "cost": "$1,750",
     "selling_number": 54,
-    "maker_Name": "Opal Magic"
+    "Name": "Opal Magic"
   },
   {
-    "Id": 20,
     "title": "Rose Gold Flower Ring",
     "image": "https://media.istockphoto.com/id/1457103735/photo/elegant-jewelry-set-jewellery-set-with-gemstones-jewelry-accessories-collage-product-still.webp?b=1&s=170667a&w=0&k=20&c=Jv0KLpSDoRze5ECzyXdCWTsnpWRS1Mx3ksaF6mK5Rtc=",
     "cost": "$1,280",
     "selling_number": 68,
-    "maker_Name": "Petals & Gold"
+    "Name": "Petals & Gold"
   }
 ]

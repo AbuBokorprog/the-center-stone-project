@@ -42,12 +42,6 @@ const Navbar = () => {
                 <Link to="allJewelry">All Jewelry</Link>
               </li>
               <li>
-                <Link to="myJewelry">My Jewelry</Link>
-              </li>
-              <li>
-                <Link to="addJewelry">Add Jewelry</Link>
-              </li>
-              <li>
                 <Link to="dashboard">Dashboard</Link>
               </li>
               <li>
@@ -73,16 +67,6 @@ const Navbar = () => {
                 All Jewelry
               </Link>
             </li>
-            <li>
-              <Link className="" to="myJewelry">
-                My Jewelry
-              </Link>
-            </li>
-            <li>
-              <Link className="" to="addJewelry">
-                Add Jewelry
-              </Link>
-            </li>
             {user?.email ? (
               <li>
                 <Link to="dashboard">Dashboard</Link>
@@ -103,7 +87,7 @@ const Navbar = () => {
             <div className="flex justify-center items-center gap-3">
               <div>
                 <img
-                  className="w-10 rounded-full"
+                  className="w-12 h-12 rounded-full"
                   title={user?.displayName}
                   src={user?.photoURL}
                   alt=""

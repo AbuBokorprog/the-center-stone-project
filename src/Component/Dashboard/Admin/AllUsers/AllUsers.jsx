@@ -5,9 +5,7 @@ const AllUsers = () => {
   const [allUser, setAllUser] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/users"
-    )
+    fetch("https://center-stone-server-side.vercel.app/users")
       .then((res) => res.json())
       .then((data) => {
         setAllUser(data);
@@ -15,7 +13,7 @@ const AllUsers = () => {
   }, []);
 
   return (
-    <div>
+    <div className="h-full w-full">
       <div>
         <h2 className="text-3xl text-center font-semibold">All Users</h2>
       </div>

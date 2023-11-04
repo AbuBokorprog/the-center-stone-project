@@ -4,9 +4,7 @@ import Jewelry from "./Jewelry";
 const AllJewelry = () => {
   const [jewelries, setJewelries] = useState([]);
   useEffect(() => {
-    fetch(
-      "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/jewelry"
-    )
+    fetch("https://center-stone-server-side.vercel.app/jewelry")
       .then((res) => res.json())
       .then((data) => {
         setJewelries(data);
@@ -19,7 +17,7 @@ const AllJewelry = () => {
         <img
           className="w-screen max-h-screen"
           src="/Image/Banner/bannerring3.jpg"
-          alt=""
+          alt="Banner Image"
         />
       </div>
       <div className="text-center pb-8 px-5 lg:px-40">

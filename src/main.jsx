@@ -6,17 +6,17 @@ import Main from "./Layout/Main";
 import ErrorPage from "./Component/ErrorPage";
 import Home from "./Component/Home/Home";
 import AllJewelry from "./Component/ALLJewelry/AllJewelry";
-import AddJewelry from "./Component/AddJewelry";
 import Blogs from "./Component/Blogs/Blogs";
 import Login from "./Component/Login";
 import Registration from "./Component/Registration";
 import AuthProvider from "./Provider/AuthProvider";
-import MyJewelry from "./Component/MyJewelry/MyJewelry";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Dashboard from "./Layout/Dashboard";
-import AllUsers from "./Component/Dashboard/AllUsers/AllUsers";
-import ManageProduct from "./Component/Dashboard/ManageProduct/ManageProduct";
-import Selectedproduct from "./Component/Dashboard/SelectedProduct/Selectedproduct";
+import AllUsers from "./Component/Dashboard/Admin/AllUsers/AllUsers";
+import ManageProduct from "./Component/Dashboard/Admin/ManageProduct/ManageProduct";
+import Selectedproduct from "./Component/Dashboard/Customer/SelectedProduct/Selectedproduct";
+import MyJewelry from "./Component/Dashboard/Manager/MyJewelry/MyJewelry";
+import AddJewelry from "./Component/Dashboard/Manager/AddJewelry";
 
 const router = createBrowserRouter([
   {
@@ -31,22 +31,6 @@ const router = createBrowserRouter([
       {
         path: "/allJewelry",
         element: <AllJewelry></AllJewelry>,
-      },
-      {
-        path: "/myJewelry",
-        element: (
-          <PrivateRoute>
-            <MyJewelry></MyJewelry>
-          </PrivateRoute>
-        ),
-      },
-      {
-        path: "/addJewelry",
-        element: (
-          <PrivateRoute>
-            <AddJewelry></AddJewelry>
-          </PrivateRoute>
-        ),
       },
       {
         path: "/blogs",
@@ -64,7 +48,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "allUsers",
@@ -77,6 +65,25 @@ const router = createBrowserRouter([
       {
         path: "mySelectedProduct",
         element: <Selectedproduct></Selectedproduct>,
+      },
+      {
+        path: "myJewelry",
+        element: (
+          <PrivateRoute>
+            <MyJewelry></MyJewelry>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "addJewelry",
+        element: (
+          <PrivateRoute>
+            <AddJewelry></AddJewelry>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "",
       },
     ],
   },

@@ -6,12 +6,9 @@ import { Link, Outlet } from "react-router-dom";
 const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const { user, logout } = useContext(authContext);
-  // console.log(user, users);
 
   useEffect(() => {
-    fetch(
-      "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/users"
-    )
+    fetch("https://center-stone-server-side.vercel.app/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
@@ -19,13 +16,12 @@ const Dashboard = () => {
   }, []);
 
   const oneUser = users.find((u) => u.email == user?.email);
-  // console.log(oneUser);
 
   return (
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content mx-auto w-full h-100 flex flex-col items-center justify-center">
+        <div className="drawer-content mx-auto flex flex-col items-center justify-center">
           <Outlet />
           <label
             htmlFor="my-drawer-2"
@@ -45,9 +41,10 @@ const Dashboard = () => {
             </div>
             {oneUser?.Role ? (
               <>
-                <li className="">
-                  <Link>
-                    <FaHome></FaHome>Owner Home
+                <li>
+                  <Link to="allUsers">
+                    <FaUsers />
+                    ALL Users
                   </Link>
                 </li>
                 <li>
@@ -70,17 +67,14 @@ const Dashboard = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="allUsers">
-                    <FaUsers />
-                    ALL Users
-                  </Link>
+                  <Link to="myJewelry">My Jewelry</Link>
+                </li>
+                <li>
+                  <Link to="addJewelry">Add Jewelry</Link>
                 </li>
               </>
             ) : (
               <>
-                <li>
-                  <Link>Client Home</Link>
-                </li>
                 <li>
                   <Link to="mySelectedProduct">
                     <span>

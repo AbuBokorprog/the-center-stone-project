@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { authContext } from "../Provider/AuthProvider";
+import { authContext } from "../../../Provider/AuthProvider";
 
 const AddJewelry = () => {
   const { user } = useContext(authContext);
@@ -14,14 +14,14 @@ const AddJewelry = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    reset();
-    const title = data.title;
-    const image = data.image;
-    const cost = data.cost;
+    // reset();
+    // const title = data.title;
+    // const image = data.image;
+    // const cost = data.cost;
     const maker_Name = data.Name;
     const maker_Email = data.Email;
-    console.log(title, image, cost, maker_Name, maker_Email);
-    fetch("http://localhost:5000/jewelry", {
+    console.log(maker_Name, maker_Email);
+    fetch("http://localhost:8080/jewelry", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -33,18 +33,8 @@ const AddJewelry = () => {
   };
 
   return (
-    <div>
-      <div className="mb-10 lg:mb-20">
-        <img
-          className="w-screen max-h-screen"
-          src="/src/assets/Image/Banner/banner11ring.jpg"
-          alt=""
-        />
-      </div>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="card-body lg:px-52 font-medium"
-      >
+    <div className="w-full h-full">
+      <form onSubmit={handleSubmit(onSubmit)} className="card-body font-medium">
         <h2 className="text-5xl text-center font-semibold">Add Jewelry</h2>
 
         <div className="form-control">
@@ -68,7 +58,6 @@ const AddJewelry = () => {
             <input
               type="text"
               placeholder="Type your maker name"
-              defaultValue={user?.displayName}
               {...register("Name", { required: true })}
               className="input input-bordered pe-20 border-red-600 input-lg"
               required
@@ -81,7 +70,6 @@ const AddJewelry = () => {
             </label>
             <input
               type="email"
-              defaultValue={user?.email}
               placeholder="Type your maker email"
               {...register("Email", { required: true })}
               className="input input-bordered pe-20 border-red-600 input-lg"
@@ -96,7 +84,7 @@ const AddJewelry = () => {
           </label>
           <input
             type="text"
-            placeholder="Type your maker email"
+            placeholder="Type your cost"
             {...register("cost", { required: true })}
             className="input input-bordered border-red-600 input-lg"
             required

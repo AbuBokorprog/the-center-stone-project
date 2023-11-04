@@ -2,7 +2,7 @@ import React from "react";
 
 const Jewelry = (props) => {
   //console.log(props.jewelry);
-  const { Id, title, image, cost, maker_Name, selling_number, popularity } =
+  const { Id, title, image, cost, Name, selling_number, popularity } =
     props.jewelry;
   const popular = popularity;
   return (
@@ -15,7 +15,7 @@ const Jewelry = (props) => {
           <h2 className="card-title">Name: {title}</h2>
           <div className="font-medium">
             <p className="text-red-600">Price: {cost}</p>
-            <p>Maker Name: {maker_Name}</p>
+            <p>Maker Name: {Name}</p>
             <p>Sold: {selling_number}</p>
           </div>
           <div className="card-actions justify-end">
