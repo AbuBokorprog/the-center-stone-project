@@ -17,6 +17,7 @@ import ManageProduct from "./Component/Dashboard/Admin/ManageProduct/ManageProdu
 import Selectedproduct from "./Component/Dashboard/Customer/SelectedProduct/Selectedproduct";
 import MyJewelry from "./Component/Dashboard/Manager/MyJewelry/MyJewelry";
 import AddJewelry from "./Component/Dashboard/Manager/AddJewelry";
+import About from "./Component/About/About";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
       {
         path: "/login",

@@ -79,6 +79,11 @@ const Navbar = () => {
                 Blogs
               </Link>
             </li>
+            <li>
+              <Link className="" to="about">
+                About us
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-end font-bold">
