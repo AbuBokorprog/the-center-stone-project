@@ -4,19 +4,17 @@ import { FaHome, FaUsers } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-  const [users, setUsers] = useState([]);
+  const [oneUsers, setUsers] = useState([]);
   const { user, logout } = useContext(authContext);
 
   useEffect(() => {
-    fetch("https://center-stone-server-side.vercel.app/users")
+    fetch(`http://localhost:5000/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
       });
   }, []);
-
-  const oneUser = users.find((u) => u.email == user?.email);
-
+  console.log(oneUsers[0]?.Role);
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -39,7 +37,7 @@ const Dashboard = () => {
                 The Center Stone
               </h2>
             </div>
-            {oneUser?.Role ? (
+            {oneUsers[0]?.Role ? (
               <>
                 <li>
                   <Link to="allUsers">
