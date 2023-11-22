@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <div>
         <img
-          src="/public/Image/Banner/banner5.jpg"
+          src="/Image/Banner/banner5.jpg"
           className="max-h-96 w-full"
           alt=""
         />
