@@ -3,20 +3,20 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer sm:p-4 lg:p-10 bg-base-200 text-base-content">
+      <footer className="footer p-4 lg:p-10 bg-base-200 text-base-content">
         <form>
           <header className="footer-title">Newsletter</header>
           <fieldset className="form-control lg:w-80">
             <label className="label">
               <span className="label-text">Enter your email address</span>
             </label>
-            <div className="lg:relative">
+            <div className="lg:relative flex justify-between items-center gap-4">
               <input
                 type="text"
                 placeholder="username@site.com"
                 className="input input-bordered w-full lg:pr-16"
               />
-              <button className="btn btn-error bg-red-600 lg:absolute lg:top-0 lg:right-0 rounded-l-none">
+              <button className="btn btn-warning bg-yellow-500 text-white lg:absolute lg:top-0 lg:right-0 rounded-l-none">
                 Subscribe
               </button>
             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           </p>
         </nav>
       </footer>
-      <footer className="footer items-center p-4 bg-red-600 text-neutral-content">
+      <footer className="footer items-center p-4 bg-yellow-500 text-black">
         <aside className="items-center grid-flow-col">
           <img src="/Image/logo (2).png" className="w-16" alt="" />
 

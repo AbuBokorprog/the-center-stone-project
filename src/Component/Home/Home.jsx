@@ -14,19 +14,20 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      {/* Best Seller Product */}
-      <section className="py-10 lg:py-20">
-        <h2 className="text-center text-5xl pb-8 font-semibold">
-          Best Seller Product
-        </h2>
-        <div className="grid sm:grid-cols-1 px-1 lg:px-0 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <section className="my-10 lg:my-20">
+        <div className="px-5 lg:px-40">
+          <h2 className="text-center text-5xl pb-3 font-semibold">
+            Best Seller Product
+          </h2>
+          <hr className="border-2 border-black" />
+        </div>
+        <div className="grid sm:grid-cols-1 mt-10 lg:mt-20 px-1 lg:px-0 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {best.slice(0, 8).map((b) => (
             <BestProduct key={b.id} best={b}></BestProduct>
           ))}
         </div>
       </section>
-      {/* Section 3 */}
-      <section className="py-10 lg:py-20">
+      <section className="my-10 lg:my-20">
         <div className="lg:flex lg:flex-row-reverse gap-10 justify-center items-center">
           <div className="grid grid-cols-2 lg:w-1/2 gap-2 px-1 lg:px-0">
             <div>
@@ -48,22 +49,21 @@ const Home = () => {
             <h3 className="text-3xl lg:text-6xl font-bold">
               Perfect Match for Every Occasion
             </h3>
-            <p className="font-semibold py-1 lg:py-4 text-xl lg:text-4xl">
+            <p className="font-semibold py-1 lg:py-4 text-2xl lg:text-4xl">
               coordinate with other pieces from the collection for a classic
               look.
             </p>
             <div className="mx-auto text-center">
-              <button className="btn btn-error bg-red-600 lg:px-10">
+              <button className="btn btn-warning bg-yellow-500 text-white lg:px-10">
                 Discover More
               </button>
             </div>
           </div>
         </div>
       </section>
-      {/* Collection */}
-      <section className="py-10 lg:py-20">
+      <section className="my-10 lg:my-20">
         <div className="px-5 lg:px-40">
-          <h2 className="text-center text-5xl pb-2 font-semibold">
+          <h2 className="text-center text-5xl pb-3 font-semibold">
             Collection
           </h2>
           <hr className="border-2 border-black" />
@@ -72,7 +72,7 @@ const Home = () => {
             our wonderful tales…
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 px-1 lg:px-0 lg:grid-cols-4 lg:grid-rows-2 gap-4">
+        <div className="grid sm:grid-cols-2 my-10 lg:my-20 px-1 lg:px-0 lg:grid-cols-4 lg:grid-rows-2 gap-4">
           <div className="">
             <img src="/Image/pexels-湉双-陈-2876035.jpg" alt="" />
           </div>
@@ -100,9 +100,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Meet People */}
-      <section className="py-20">
-        <div className="text-center lg:px-40 pb-5">
+      <section className="my-10 lg:my-20">
+        <div className="text-center lg:px-40">
           <p className="text-sm font-medium pb-1 font-serif italic">
             TEAM MEMBERS
           </p>
@@ -117,7 +116,7 @@ const Home = () => {
             timeless treasures for you.
           </p>
         </div>
-        <div className="grid lg:grid-cols-4 gap-5 px-1 lg:px-0">
+        <div className="grid lg:grid-cols-4 my-10 lg:my-20 gap-5 px-1 lg:px-0">
           <div>
             <img src="/Image/owner.jpg" alt="" />
             <div className="text-center">

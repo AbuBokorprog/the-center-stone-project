@@ -41,9 +41,13 @@ const Navbar = () => {
               <li>
                 <Link to="allJewelry">All Jewelry</Link>
               </li>
-              <li>
-                <Link to="dashboard">Dashboard</Link>
-              </li>
+              {user?.email ? (
+                <li>
+                  <Link to="dashboard">Dashboard</Link>
+                </li>
+              ) : (
+                ""
+              )}
               <li>
                 <Link to="blogs">Blogs</Link>
               </li>
@@ -101,14 +105,16 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={logoutHandler}
-                  className="btn btn-error bg-red-600"
+                  className="btn btn-warning bg-yellow-500 "
                 >
                   LogOut
                 </button>
               </div>
             </div>
           ) : (
-            <Link to="login">Login</Link>
+            <Link to="login" className="btn btn-warning bg-yellow-400 ">
+              Login
+            </Link>
           )}
         </div>
       </div>

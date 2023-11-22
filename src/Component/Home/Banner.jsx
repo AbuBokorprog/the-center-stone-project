@@ -1,7 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -9,7 +7,7 @@ import { Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="lg:pb-20">
+    <div className="">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <img
@@ -18,7 +16,9 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute top-12 lg:top-20 text-center left-20 lg:left-0 text-white">
-            <p className="text-xl font-medium">Essential Accessories</p>
+            <p className="text-xl lg:text-2xl font-semibold">
+              Essential Accessories
+            </p>
             <h1 className="text-2xl lg:text-7xl font-bold mb-6 lg:mb-0">
               Golden Charms
             </h1>
@@ -31,7 +31,7 @@ const Banner = () => {
               charms.
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-red-600 lg:px-10 border-0">
+              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
                 View More
               </button>
             </div>
@@ -44,7 +44,9 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute top-20 lg:top-20 text-center left-24 lg:left-0 text-black">
-            <p className="text-xl font-medium">Hot of the season</p>
+            <p className="text-xl lg:text-2xl font-semibold">
+              Hot of the season
+            </p>
             <h1 className="text-2xl lg:text-7xl font-bold mb-6 lg:mb-4">
               Jewelry Shop
             </h1>
@@ -71,7 +73,9 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute top-12 lg:top-20 text-center left-20 lg:left-0 text-white">
-            <p className="text-xl font-medium">Essential Accessories</p>
+            <p className="text-xl lg:text-2xl font-semibold">
+              Essential Accessories
+            </p>
             <h1 className="text-2xl lg:text-7xl font-bold mb-6 lg:mb-0">
               Golden Charms
             </h1>{" "}
@@ -84,7 +88,7 @@ const Banner = () => {
               charms.
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-red-600 lg:px-10 border-0">
+              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
                 View More
               </button>
             </div>
@@ -97,7 +101,9 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute top-12 lg:top-20 text-center left-24 lg:left-0 text-white">
-            <p className="text-xl font-medium">Hot of the season</p>
+            <p className="text-xl lg:text-2xl font-semibold">
+              Hot of the season
+            </p>
             <h1 className="text-2xl lg:text-7xl font-bold mb-6 lg:mb-0">
               Jewelry Shop
             </h1>{" "}
@@ -110,7 +116,7 @@ const Banner = () => {
               latest trend!
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-red-600 lg:px-10 border-0">
+              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
                 View More
               </button>
             </div>
@@ -123,7 +129,9 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute top-12 lg:top-20 text-center left-20 lg:left-0 text-white">
-            <p className="text-xl font-medium">Ultimate ring models</p>
+            <p className="text-xl lg:text-2xl font-semibold">
+              Ultimate ring models
+            </p>
             <h1 className="lg:text-7xl font-bold">Wedding Ring</h1> <br />
             <div className="lg:px-40">
               <hr className="border-2 border-white hidden lg:block" />
@@ -133,7 +141,7 @@ const Banner = () => {
               shop and we'll make your important moments in life even greater.
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-red-600 lg:px-10 border-0">
+              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
                 View More
               </button>
             </div>
