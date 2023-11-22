@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <div>
         <img
-          src="/Image/Banner/banner5.jpg"
+          src="/Image/Banner/banner15.jpg"
           className="max-h-96 w-full"
           alt=""
         />
@@ -92,7 +92,7 @@ const About = () => {
                 </div>
               </div>
               <div className=" text-center my-2">
-                <button className="btn btn-error px-32 lg:px-44 text-center">
+                <button className="btn btn-warning px-32 lg:px-44 text-center">
                   Send
                 </button>
               </div>

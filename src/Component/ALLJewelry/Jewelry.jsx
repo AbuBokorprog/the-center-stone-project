@@ -18,8 +18,10 @@ const Jewelry = (props) => {
             <p>Maker Name: {Name}</p>
             <p>Sold: {selling_number}</p>
           </div>
-          <div className="card-actions justify-end">
-            <button className="btn btn-error bg-red-600">Buy Now</button>
+          <div className="card-actions justify-start">
+            <button className="btn btn-warning bg-yellow-500 text-white">
+              Buy Now
+            </button>
           </div>
         </div>
       </div>

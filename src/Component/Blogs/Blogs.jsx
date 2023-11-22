@@ -14,13 +14,13 @@ const Blogs = () => {
   }, []);
   return (
     <div className="mb-20">
-      <div className="mb-20">
+      {/* <div className="mb-20">
         <img
           className="w-screen max-h-screen"
           src="/Image/Banner/banner9.jpg"
           alt=""
         />
-      </div>
+      </div> */}
       <div className="pb-4">
         <h2 className="text-center font-semibold text-5xl">Blogs</h2>
       </div>
