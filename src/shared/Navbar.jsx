@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { FaRegHeart } from "react-icons/fa";
+import { MdOutlineShoppingBag } from "react-icons/md";
 import { authContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
@@ -91,7 +93,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end font-bold">
-          {/* <Link to="login">Login</Link> */}
+          <Link to={"/wishlist"} className="mx-2">
+            <FaRegHeart className="w-full"></FaRegHeart>
+          </Link>
+          <Link to={"/cart"} className="mx-2">
+            <MdOutlineShoppingBag className="w-full"></MdOutlineShoppingBag>
+          </Link>
           {user?.email ? (
             <div className="flex justify-center items-center gap-3">
               <div>

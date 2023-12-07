@@ -18,6 +18,8 @@ import Selectedproduct from "./Component/Dashboard/Customer/SelectedProduct/Sele
 import MyJewelry from "./Component/Dashboard/Manager/MyJewelry/MyJewelry";
 import AddJewelry from "./Component/Dashboard/Manager/AddJewelry";
 import About from "./Component/About/About";
+import Cart from "./Component/Cart/Cart";
+import Wishlist from "./Component/Wishlist/Wishlist";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,15 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
+      },
+
       {
         path: "/registration",
         element: <Registration></Registration>,
