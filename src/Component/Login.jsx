@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { authContext } from "../Provider/AuthProvider";
 
 const Login = () => {
-  const { signInUser, user, google } = useContext(authContext);
+  const { signInUser, google } = useContext(authContext);
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState([]);
   const [show, setShow] = useState(false);
@@ -13,7 +13,6 @@ const Login = () => {
     register,
     handleSubmit,
     reset,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -24,7 +23,7 @@ const Login = () => {
     signInUser(email, password)
       .then((signInUser) => {
         const user = signInUser.user;
-        console.log(user);
+        // console.log(user);
         setSuccess("Successfully");
         setError("");
       })
@@ -39,22 +38,23 @@ const Login = () => {
     google()
       .then((loggedUser) => {
         const user = loggedUser.user;
-        console.log(user);
-        fetch(
-          "https://the-center-stone-server-6fcim3n2o-abubokorprog.vercel.app/users",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(user),
-          }
-        )
+        // console.log(user);
+        fetch("https://center-stone-server-side.vercel.app/users", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(user),
+        })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
+            setSuccess("Successfully");
+            setError("");
           });
       })
       .catch((error) => {
-        console.log(error.message);
+        setSuccess("");
+        setError(error.message);
+        // console.log();
       });
   };
 
@@ -70,8 +70,8 @@ const Login = () => {
               onSubmit={handleSubmit(onSubmit)}
               className="card-body bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"
             >
-              <div>
-                <p className="text-green-400 text-sm">{success}</p>
+              <div className="text-xl font-medium text-center">
+                <p className="text-green-400 ">{success}</p>
                 <p className="text-red-500 text-sm">{error}</p>
               </div>
 

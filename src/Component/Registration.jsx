@@ -15,7 +15,6 @@ const Registration = () => {
     register,
     handleSubmit,
     reset,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -23,8 +22,8 @@ const Registration = () => {
     reset();
     const email = data.email;
     const password = data.password;
-    const name = data.name;
-    const image = data.image;
+    const displayName = data.name;
+    const photoURL = data.photoURL;
     if (password !== data.confirm_password) {
       setError("Passwords do not match");
       return;
@@ -33,24 +32,24 @@ const Registration = () => {
     createUser(email, password)
       .then((loggedUser) => {
         const user = loggedUser.user;
-        console.log(user);
+        // console.log(user);
         setSuccess("Successfully Registered");
         setError("");
-        updateProfileData(name, image);
+        updateProfileData(displayName, photoURL);
         // Navigate("/login");
-        fetch("http://localhost:5000/users", {
+        fetch("https://center-stone-server-side.vercel.app/users", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
           });
       })
       .catch((error) => {
         const message = error.message;
-        console.log(message);
+        // console.log(message);
         setError(message);
         setSuccess("");
       });
@@ -79,7 +78,7 @@ const Registration = () => {
                 <input
                   type="text"
                   placeholder="Type Your Name"
-                  {...register("name", { required: true })}
+                  {...register("displayName", { required: true })}
                   className="input input-bordered border-red-600"
                   required
                 />
@@ -188,7 +187,7 @@ const Registration = () => {
                 <input
                   type="text"
                   placeholder="Photo URL"
-                  {...register("image")}
+                  {...register("photoURL")}
                   className="input input-bordered border-red-600"
                   required
                 />
@@ -205,11 +204,6 @@ const Registration = () => {
                   >
                     Have you login?
                   </Link>
-                </label>
-              </div>
-              <div className="mx-auto">
-                <label className="label">
-                  <button className="btn">Google</button>
                 </label>
               </div>
             </form>

@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import AuthProvider, { authContext } from "../Provider/AuthProvider";
+import { useContext, useEffect, useState } from "react";
+import { authContext } from "../Provider/AuthProvider";
 import { FaHome, FaUsers } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 
@@ -8,12 +8,12 @@ const Dashboard = () => {
   const { user, logout } = useContext(authContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`)
+    fetch(`https://center-stone-server-side.vercel.app/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
       });
-  }, []);
+  }, [user]);
   console.log(oneUsers[0]?.Role);
   return (
     <div>
@@ -37,7 +37,7 @@ const Dashboard = () => {
                 The Center Stone
               </h2>
             </div>
-            {oneUsers[0]?.Role ? (
+            {oneUsers[0]?.Role === "admin" ? (
               <>
                 <li>
                   <Link to="allUsers">

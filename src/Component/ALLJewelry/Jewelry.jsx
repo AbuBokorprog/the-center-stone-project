@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaRegHeart } from "react-icons/fa";
+import { authContext } from "../../Provider/AuthProvider";
+import { Navigate } from "react-router-dom";
 
 const Jewelry = ({ jewelry }) => {
-  const { Id, title, image, cost, Name, selling_number, popularity } = jewelry;
+  const { user } = useContext(authContext);
+  const { title, image, cost, Name, selling_number, popularity } = jewelry;
   // const popular = popularity;
+
+  const addHandler = () => {
+    if (user?.email) {
+      const arr = { jewelry, user };
+      console.log(arr);
+    } else {
+      alert("Please Sign In");
+      return <Navigate to={"/login"} replace={true}></Navigate>;
+    }
+  };
 
   return (
     <div>
@@ -22,7 +35,10 @@ const Jewelry = ({ jewelry }) => {
             <button className="btn text-red-500 ">
               <FaRegHeart />
             </button>
-            <button className="btn btn-error bg-yellow-500 text-white">
+            <button
+              onClick={addHandler}
+              className="btn btn-error bg-yellow-500 text-white"
+            >
               Add
             </button>
           </div>
