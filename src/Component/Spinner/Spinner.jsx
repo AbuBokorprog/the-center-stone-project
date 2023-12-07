@@ -6,8 +6,8 @@ const Spinner = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setRotation((prevRotation) => (prevRotation + 30) % 360);
-    }, 100);
+      setRotation((prevRotation) => (prevRotation + 15) % 360);
+    }, 50);
 
     return () => {
       clearInterval(intervalId);
@@ -15,10 +15,14 @@ const Spinner = () => {
   }, []);
 
   return (
-    <div
-      className="spinner"
-      style={{ transform: `rotate(${rotation}deg)` }}
-    ></div>
+    <div className="full-screen-spinner">
+      <div
+        className="jewelry-spinner"
+        style={{ transform: `rotate(${rotation}deg)` }}
+      >
+        <div className="gem"></div>
+      </div>
+    </div>
   );
 };
 

@@ -56,7 +56,7 @@ const Footer = () => {
       </footer>
       <footer className="footer items-center p-4 bg-yellow-500 text-black">
         <aside className="items-center grid-flow-col">
-          <img src="/Image/logo (2).png" className="w-16" alt="" />
+          <img src="/Image/logo.png" className="w-16" alt="" />
 
           <p>
             <span className="text-xl font-bold font-serif">
