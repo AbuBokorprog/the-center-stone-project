@@ -57,7 +57,7 @@ const Navbar = () => {
           </div>
 
           <img className="w-20 lg:w-32" src="/Image/logo (2).png" alt="" />
-          <Link to="/" className="lg:normal-case lg:visible text-sm lg:text-xl">
+          <Link to="/" className="font-bold lg:visible text-sm lg:text-xl">
             The Center Stone
           </Link>
         </div>

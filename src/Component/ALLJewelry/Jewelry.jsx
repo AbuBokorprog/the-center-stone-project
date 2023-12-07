@@ -1,10 +1,10 @@
 import React from "react";
+import { FaRegHeart } from "react-icons/fa";
 
-const Jewelry = (props) => {
-  //console.log(props.jewelry);
-  const { Id, title, image, cost, Name, selling_number, popularity } =
-    props.jewelry;
-  const popular = popularity;
+const Jewelry = ({ jewelry }) => {
+  const { Id, title, image, cost, Name, selling_number, popularity } = jewelry;
+  // const popular = popularity;
+
   return (
     <div>
       <div className="card mx-auto w-fit px-1 lg:px-0 lg:w-80 bg-base-100 shadow-xl">
@@ -18,9 +18,12 @@ const Jewelry = (props) => {
             <p>Maker Name: {Name}</p>
             <p>Sold: {selling_number}</p>
           </div>
-          <div className="card-actions justify-start">
-            <button className="btn btn-warning bg-yellow-500 text-white">
-              Buy Now
+          <div className="card-actions justify-between">
+            <button className="btn text-red-500 ">
+              <FaRegHeart />
+            </button>
+            <button className="btn btn-error bg-yellow-500 text-white">
+              Add
             </button>
           </div>
         </div>
