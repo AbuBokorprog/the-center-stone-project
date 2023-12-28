@@ -5,13 +5,21 @@ import { Navigate } from "react-router-dom";
 
 const Jewelry = ({ jewelry }) => {
   const { user } = useContext(authContext);
-  const { title, image, cost, Name, selling_number, popularity } = jewelry;
+  const { title, image, cost, Name, selling_number } = jewelry;
   // const popular = popularity;
 
   const addHandler = () => {
     if (user?.email) {
-      const arr = { jewelry, user };
-      console.log(arr);
+      const Wishlist = { jewelry, user };
+      fetch("https://center-stone-server-side.vercel.app/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Wishlist),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          // console.log(data);
+        });
     } else {
       alert("Please Sign In");
       return <Navigate to={"/login"} replace={true}></Navigate>;

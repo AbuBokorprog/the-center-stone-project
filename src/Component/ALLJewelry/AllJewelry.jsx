@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Jewelry from "./Jewelry";
 import JewelrySkeleton from "../Spinner/JewelrySkeleton";
 
@@ -19,7 +19,7 @@ const AllJewelry = () => {
       <div className="pb-10 lg:pb-20">
         <img
           className="w-screen max-h-96"
-          src="/public/Image/Banner/banner9.jpg"
+          src="/Image/Banner/banner9.jpg"
           alt="Banner Image"
         />
       </div>
@@ -27,7 +27,7 @@ const AllJewelry = () => {
         <h2 className="text-5xl font-semibold pb-3">ALL JEWELRY</h2>
         <hr className="border-2 border-black" />
         <p className="font-medium py-2">
-          Discover a world of beauty with our "All Jewelry" collection. From
+          Discover a world of beauty with our All Jewelry collection. From
           timeless classics to contemporary treasures, find the perfect piece to
           express your style and grace any occasion.
         </p>

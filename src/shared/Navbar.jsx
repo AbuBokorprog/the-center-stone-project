@@ -38,10 +38,14 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-xl"
             >
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" className="">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="allJewelry">All Jewelry</Link>
+                <Link className="" to="allJewelry">
+                  All Jewelry
+                </Link>
               </li>
               {user?.email ? (
                 <li>
@@ -51,7 +55,14 @@ const Navbar = () => {
                 ""
               )}
               <li>
-                <Link to="blogs">Blogs</Link>
+                <Link className="" to="blogs">
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link className="" to="about">
+                  About us
+                </Link>
               </li>
             </ul>
           </div>
