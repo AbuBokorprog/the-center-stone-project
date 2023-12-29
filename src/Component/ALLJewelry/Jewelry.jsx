@@ -6,19 +6,19 @@ import { Navigate } from "react-router-dom";
 const Jewelry = ({ jewelry }) => {
   const { user } = useContext(authContext);
   const { title, image, cost, Name, selling_number } = jewelry;
-  // const popular = popularity;
 
   const addHandler = () => {
     if (user?.email) {
-      const Wishlist = { jewelry, user };
-      fetch("https://center-stone-server-side.vercel.app/users", {
+      const email = user?.email;
+      const cart = { title, image, cost, email };
+      fetch("http://localhost:5000/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Wishlist),
+        body: JSON.stringify(cart),
       })
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data);
+          console.log(data);
         });
     } else {
       alert("Please Sign In");
