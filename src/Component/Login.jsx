@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useForm, useWatch } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { authContext } from "../Provider/AuthProvider";
@@ -9,6 +9,9 @@ const Login = () => {
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState([]);
   const [show, setShow] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
   const {
     register,
     handleSubmit,
@@ -26,6 +29,7 @@ const Login = () => {
         // console.log(user);
         setSuccess("Successfully");
         setError("");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const message = error.message;
@@ -49,6 +53,7 @@ const Login = () => {
             // console.log(data);
             setSuccess("Successfully");
             setError("");
+            navigate(from, { replace: true });
           });
       })
       .catch((error) => {

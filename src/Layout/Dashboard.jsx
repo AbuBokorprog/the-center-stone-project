@@ -14,7 +14,7 @@ const Dashboard = () => {
         setUsers(data);
       });
   }, [user]);
-  console.log(oneUsers[0]?.Role);
+
   return (
     <div>
       <div className="drawer lg:drawer-open">

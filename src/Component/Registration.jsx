@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useForm, useWatch } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { authContext } from "../Provider/AuthProvider";
@@ -10,6 +10,10 @@ const Registration = () => {
   const [success, setSuccess] = useState([]);
   const [show, setShow] = useState(false);
   const [confirmShow, setConfirmShow] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.form?.pathname || "/";
 
   const {
     register,
@@ -32,24 +36,20 @@ const Registration = () => {
     createUser(email, password)
       .then((loggedUser) => {
         const user = loggedUser.user;
-        // console.log(user);
         setSuccess("Successfully Registered");
         setError("");
+        navigate(from, { replace: true });
         updateProfileData(displayName, photoURL);
-        // Navigate("/login");
         fetch("https://center-stone-server-side.vercel.app/users", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         })
           .then((res) => res.json())
-          .then((data) => {
-            // console.log(data);
-          });
+          .then((data) => {});
       })
       .catch((error) => {
         const message = error.message;
-        // console.log(message);
         setError(message);
         setSuccess("");
       });
