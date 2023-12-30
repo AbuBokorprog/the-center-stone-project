@@ -1,28 +1,60 @@
-import React, { useContext } from "react";
-import { FaRegHeart } from "react-icons/fa";
+import React, { useContext, useState } from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { authContext } from "../../Provider/AuthProvider";
 import { Navigate } from "react-router-dom";
 
 const Jewelry = ({ jewelry }) => {
   const { user } = useContext(authContext);
   const { title, image, cost, Name, selling_number } = jewelry;
+  const [isWishlist, setIsWishlist] = useState(false);
 
   const addHandler = () => {
     if (user?.email) {
       const email = user?.email;
       const cart = { title, image, cost, email };
-      fetch("http://localhost:5000/cart", {
+      fetch("https://center-stone-server-side.vercel.app/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(cart),
       })
         .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-        });
+        .then((data) => {});
+      alert("Added to cart");
     } else {
       alert("Please Sign In");
       return <Navigate to={"/login"} replace={true}></Navigate>;
+    }
+  };
+
+  const wishHandler = () => {
+    if (user?.email) {
+      setIsWishlist(!isWishlist);
+      if (isWishlist === false) {
+        const email = user?.email;
+        const wishlist = { title, image, cost, selling_number, Name, email };
+        fetch("http://localhost:5000/wishlist", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(wishlist),
+        })
+          .then((res) => res.json())
+          .then((data) => {}),
+          alert("added wishlist");
+      } else {
+        const email = user?.email;
+        // fetch(`http://localhost:5000/wishlist/${email}/${title}`, {
+        //   method: "DELETE",
+        //   headers: { "content-type": "application/json" },
+        // })
+        //   .then((res) => res.json())
+        //   .then((data) => {
+        //     console.log(data);
+        //     alert("remove wishlist");
+        //   });
+      }
+    } else {
+      alert("Please login");
+      setIsWishlist(false);
     }
   };
 
@@ -40,8 +72,8 @@ const Jewelry = ({ jewelry }) => {
             <p>Sold: {selling_number}</p>
           </div>
           <div className="card-actions justify-between">
-            <button className="btn text-red-500 ">
-              <FaRegHeart />
+            <button onClick={wishHandler} className="btn text-red-500 ">
+              {isWishlist === false ? <FaRegHeart /> : <FaHeart />}
             </button>
             <button
               onClick={addHandler}

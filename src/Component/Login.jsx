@@ -50,7 +50,6 @@ const Login = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data);
             setSuccess("Successfully");
             setError("");
             navigate(from, { replace: true });
