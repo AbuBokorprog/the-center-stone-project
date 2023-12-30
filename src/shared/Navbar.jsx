@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { authContext } from "../Provider/AuthProvider";
+import RightSideModal from "../Component/RightSideModal/RightSideModal";
 
 const Navbar = () => {
   const { user, logout } = useContext(authContext);
@@ -107,9 +108,11 @@ const Navbar = () => {
           <Link to={"/wishlist"} className="mx-2">
             <FaRegHeart className="w-full"></FaRegHeart>
           </Link>
-          <Link to={"/cart"} className="mx-2">
+          {/* <Link to={"/cart"} className="mx-2">
             <MdOutlineShoppingBag className="w-full"></MdOutlineShoppingBag>
-          </Link>
+          </Link> */}
+          <RightSideModal />
+
           {user?.email ? (
             <div className="flex justify-center items-center gap-3">
               <div>
