@@ -42,15 +42,15 @@ const Jewelry = ({ jewelry }) => {
           alert("added wishlist");
       } else {
         const email = user?.email;
-        // fetch(`http://localhost:5000/wishlist/${email}/${title}`, {
-        //   method: "DELETE",
-        //   headers: { "content-type": "application/json" },
-        // })
-        //   .then((res) => res.json())
-        //   .then((data) => {
-        //     console.log(data);
-        //     alert("remove wishlist");
-        //   });
+        fetch(`http://localhost:5000/wishlist/${email}/${title}`, {
+          method: "DELETE",
+          headers: { "content-type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            alert("remove wishlist");
+          });
       }
     } else {
       alert("Please login");
