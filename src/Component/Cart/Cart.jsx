@@ -24,7 +24,7 @@ const Cart = () => {
       )
     );
 
-    fetch(`http://localhost:5000/cart/${cartId}`, {
+    fetch(`https://center-stone-server-side.vercel.app/cart/${cartId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const Cart = () => {
           cart._id === cartId ? { ...cart, quantity: newQuantity } : cart
         )
       );
-      fetch(`http://localhost:5000/cart/${cartId}`, {
+      fetch(`https://center-stone-server-side.vercel.app/cart/${cartId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -61,6 +61,22 @@ const Cart = () => {
     } else {
       alert("minimum quantity 1");
     }
+  };
+
+  const deleteHandler = (email, title) => {
+    fetch(
+      `https://center-stone-server-side.vercel.app/cart/${email}/${title}`,
+      {
+        method: "Delete",
+        headers: { "Content-Type": "application/json" },
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          alert("remove wishlist");
+        }
+      });
   };
 
   return (
@@ -87,7 +103,7 @@ const Cart = () => {
               +
             </button>
           </div>
-          <button>X</button>
+          <button onClick={() => deleteHandler(user?.email, c.title)}>X</button>
         </div>
       ))}
     </div>

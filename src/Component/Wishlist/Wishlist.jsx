@@ -8,7 +8,6 @@ const Wishlist = () => {
     fetch(`https://center-stone-server-side.vercel.app/wishlist/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setWishlist(data);
       });
   }, [user?.email]);
