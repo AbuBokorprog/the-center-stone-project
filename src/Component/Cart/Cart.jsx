@@ -8,12 +8,24 @@ const Cart = () => {
   const [overallTotal, setOverallTotal] = useState("");
 
   useEffect(() => {
-    fetch(`https://center-stone-server-side.vercel.app/cart/${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setLoading(false);
+    const fetchCartData = async () => {
+      try {
+        const response = await fetch(
+          `https://center-stone-server-side.vercel.app/cart/${user?.email}`
+        );
+        const data = await response.json();
         setCart(data);
-      });
+        const total = data.reduce(
+          (acc, item) => acc + parseFloat(item.cost) * item.quantity,
+          0
+        );
+        setOverallTotal(total);
+      } catch (error) {
+        console.error("Error fetching cart data:", error);
+      }
+    };
+
+    fetchCartData();
   }, [user?.email]);
 
   const updateQuantity = async (cartId, newQuantity) => {
@@ -46,11 +58,6 @@ const Cart = () => {
   const plusHandler = (cartId, currentQuantity) => {
     const newQuantity = currentQuantity + 1;
     updateQuantity(cartId, newQuantity);
-    const total = carts.reduce(
-      (acc, item) => acc + parseFloat(item.cost) * item.quantity,
-      0
-    );
-    setOverallTotal(total);
   };
 
   const minusHandler = (cartId, currentQuantity) => {
@@ -58,11 +65,6 @@ const Cart = () => {
       const newQuantity = currentQuantity - 1;
       updateQuantity(cartId, newQuantity);
     }
-    const total = carts.reduce(
-      (acc, item) => acc + parseFloat(item.cost) * item.quantity,
-      0
-    );
-    setOverallTotal(total);
   };
 
   const deleteHandler = (email, title) => {
