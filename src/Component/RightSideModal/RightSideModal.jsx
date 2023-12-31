@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import Cart from "../Cart/Cart";
 
-const RightSideModal = () => {
+const RightSideModal = ({ title, component }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -14,12 +14,12 @@ const RightSideModal = () => {
   };
 
   return (
-    <div className="relative z-50">
+    <div className="relative z-10">
       <button
         onClick={openModal}
-        className=" text-yellow-500 font-bold py-2 px-4 rounded"
+        className={`${isModalOpen ? "text-white" : "text-yellow-500"} p-4`}
       >
-        <MdOutlineShoppingBag className="w-full h-full"></MdOutlineShoppingBag>
+        {title}
       </button>
 
       {isModalOpen && (
@@ -28,10 +28,9 @@ const RightSideModal = () => {
           onClick={closeModal}
         ></div>
       )}
-
       <div
-        className={`fixed right-0 top-0 h-full w-full lg:w-1/2 bg-white shadow-lg p-8 transform transition-transform ${
-          isModalOpen ? "translate-x-0 lg:translate-x-20" : "translate-x-full"
+        className={`fixed right-0 top-0 h-full w-full lg:w-1/2 bg-white shadow-lg p-4 transform transition-transform ${
+          isModalOpen ? "translate-x-0 lg:translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-end">
@@ -42,9 +41,7 @@ const RightSideModal = () => {
             X
           </button>
         </div>
-        <div className="mt-4">
-          <Cart />
-        </div>
+        <div className="overflow-y-auto h-full">{component}</div>
       </div>
     </div>
   );

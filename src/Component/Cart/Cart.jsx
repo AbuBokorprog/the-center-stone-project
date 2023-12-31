@@ -5,6 +5,7 @@ const Cart = () => {
   const { user } = useContext(authContext);
   const [carts, setCart] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [overallTotal, setOverallTotal] = useState("");
 
   useEffect(() => {
     fetch(`https://center-stone-server-side.vercel.app/cart/${user?.email}`)
@@ -12,6 +13,11 @@ const Cart = () => {
       .then((data) => {
         setLoading(false);
         setCart(data);
+        const total = data.reduce(
+          (acc, item) => acc + parseFloat(item.cost) * item.quantity,
+          0
+        );
+        setOverallTotal(total);
       });
   }, [user?.email]);
 
@@ -80,32 +86,52 @@ const Cart = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-3xl mb-6 -mt-16">Your Cart</h1>
+    <div className="pb-20">
+      <h1 className="text-3xl mb-6">Your Cart</h1>
       {carts.map((c) => (
-        <div key={c._id} className="flex gap-6 mx-auto items-center">
-          <figure>
-            <img src={c.image} alt="" className="w-32 h-20" />
-          </figure>
-          <h6 className="w-44">{c.title}</h6>
-          <div className="flex gap-2 items-center">
-            <button
-              onClick={() => minusHandler(c._id, c.quantity)}
-              className="btn"
-            >
-              -
-            </button>
-            <p>{c.quantity}</p>
-            <button
-              onClick={() => plusHandler(c._id, c.quantity)}
-              className="btn"
-            >
-              +
+        <div key={c._id}>
+          <div className="flex gap-10 mx-auto items-center my-2">
+            <figure>
+              <img src={c.image} alt="" className="w-32 h-20" />
+            </figure>
+            <h6 className="w-44">{c.title}</h6>
+            <div className="flex gap-4 items-center">
+              <button
+                onClick={() => minusHandler(c._id, c.quantity)}
+                className="btn"
+              >
+                -
+              </button>
+              <p>{c.quantity}</p>
+              <button
+                onClick={() => plusHandler(c._id, c.quantity)}
+                className="btn"
+              >
+                +
+              </button>
+            </div>
+            <button onClick={() => deleteHandler(user?.email, c.title)}>
+              X
             </button>
           </div>
-          <button onClick={() => deleteHandler(user?.email, c.title)}>X</button>
+          <hr />
+          <p className="font-bold">Price: {parseInt(c.cost) * c.quantity}</p>
         </div>
       ))}
+
+      <div className="flex justify-between my-1">
+        <h2 className="text-3xl">Total:</h2>
+        <h2 className="text-3xl">${overallTotal}</h2>
+      </div>
+      <div className="flex justify-between my-1">
+        <h2 className="text-3xl">Tax:</h2>
+        <h2 className="text-3xl">$5%</h2>
+      </div>
+      <div className="flex justify-between">
+        <h2 className="text-3xl">Total Amount:</h2>
+        <h2 className="text-3xl">{(overallTotal / 100) * 5 + overallTotal}</h2>
+      </div>
+      <div></div>
     </div>
   );
 };

@@ -4,6 +4,8 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { authContext } from "../Provider/AuthProvider";
 import RightSideModal from "../Component/RightSideModal/RightSideModal";
+import Cart from "../Component/Cart/Cart";
+import Wishlist from "../Component/Wishlist/Wishlist";
 
 const Navbar = () => {
   const { user, logout } = useContext(authContext);
@@ -105,13 +107,20 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end font-bold">
-          <Link to={"/wishlist"} className="mx-2">
-            <FaRegHeart className="w-full"></FaRegHeart>
-          </Link>
-          {/* <Link to={"/cart"} className="mx-2">
-            <MdOutlineShoppingBag className="w-full"></MdOutlineShoppingBag>
-          </Link> */}
-          <RightSideModal />
+          <div>
+            <RightSideModal
+              component={<Cart />}
+              title={
+                <MdOutlineShoppingBag className="w-full"></MdOutlineShoppingBag>
+              }
+            />
+          </div>
+          <div>
+            <RightSideModal
+              component={<Wishlist />}
+              title={<FaRegHeart className="w-full"></FaRegHeart>}
+            />
+          </div>
 
           {user?.email ? (
             <div className="flex justify-center items-center gap-3">

@@ -48,15 +48,6 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: "/cart",
-        element: <Cart />,
-      },
-      {
-        path: "/wishlist",
-        element: <Wishlist />,
-      },
-
-      {
         path: "/registration",
         element: <Registration></Registration>,
       },
@@ -97,9 +88,6 @@ const router = createBrowserRouter([
             <AddJewelry></AddJewelry>
           </PrivateRoute>
         ),
-      },
-      {
-        path: "",
       },
     ],
   },
