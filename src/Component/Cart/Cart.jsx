@@ -13,75 +13,82 @@ const Cart = () => {
       .then((data) => {
         setLoading(false);
         setCart(data);
-        const total = data.reduce(
-          (acc, item) => acc + parseFloat(item.cost) * item.quantity,
-          0
-        );
-        setOverallTotal(total);
       });
   }, [user?.email]);
 
+  const updateQuantity = async (cartId, newQuantity) => {
+    try {
+      const response = await fetch(
+        `https://center-stone-server-side.vercel.app/cart/${cartId}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ quantity: newQuantity }),
+        }
+      );
+
+      if (response.ok) {
+        setCart((prevCarts) =>
+          prevCarts.map((cart) =>
+            cart._id === cartId ? { ...cart, quantity: newQuantity } : cart
+          )
+        );
+      } else {
+        console.error("Failed to update quantity on the server");
+      }
+    } catch (error) {
+      console.error("Error updating quantity:", error);
+    }
+  };
+
   const plusHandler = (cartId, currentQuantity) => {
     const newQuantity = currentQuantity + 1;
-
-    setCart((prevCarts) =>
-      prevCarts.map((cart) =>
-        cart._id === cartId ? { ...cart, quantity: newQuantity } : cart
-      )
+    updateQuantity(cartId, newQuantity);
+    const total = carts.reduce(
+      (acc, item) => acc + parseFloat(item.cost) * item.quantity,
+      0
     );
-
-    fetch(`https://center-stone-server-side.vercel.app/cart/${cartId}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ quantity: newQuantity }),
-    })
-      .then((res) => res.json())
-      .then((data) => {})
-      .catch((error) => {
-        console.error("Error updating quantity:", error);
-      });
+    setOverallTotal(total);
   };
-  const minusHandler = (cartId, currentQuantity) => {
-    const newQuantity = currentQuantity - 1;
 
-    if (1 <= newQuantity) {
-      setCart((prevCarts) =>
-        prevCarts.map((cart) =>
-          cart._id === cartId ? { ...cart, quantity: newQuantity } : cart
-        )
-      );
-      fetch(`https://center-stone-server-side.vercel.app/cart/${cartId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ quantity: newQuantity }),
-      })
-        .then((res) => res.json())
-        .then((data) => {})
-        .catch((error) => {
-          console.error("Error updating quantity:", error);
-        });
-    } else {
-      alert("minimum quantity 1");
+  const minusHandler = (cartId, currentQuantity) => {
+    if (currentQuantity > 0) {
+      const newQuantity = currentQuantity - 1;
+      updateQuantity(cartId, newQuantity);
     }
+    const total = carts.reduce(
+      (acc, item) => acc + parseFloat(item.cost) * item.quantity,
+      0
+    );
+    setOverallTotal(total);
   };
 
   const deleteHandler = (email, title) => {
     fetch(
       `https://center-stone-server-side.vercel.app/cart/${email}/${title}`,
       {
-        method: "Delete",
+        method: "DELETE", // Correct the method to "DELETE"
         headers: { "Content-Type": "application/json" },
       }
     )
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("remove wishlist");
+          setCart((prevCarts) =>
+            prevCarts.filter(
+              (cart) => cart.email !== email || cart.title !== title
+            )
+          );
+
+          alert("Remove from cart");
+        } else {
+          alert("Item not found in the cart");
         }
+      })
+      .catch((error) => {
+        console.error("Error deleting item:", error);
       });
   };
 

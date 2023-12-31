@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
 import BestProduct from "./BestProduct";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
   const [best, setBest] = useState([]);
   useEffect(() => {
     fetch(`/bestProduct.json`)
       .then((res) => res.json())
       .then((data) => {
+        setLoading(false);
         setBest(data);
       });
   }, []);
@@ -54,9 +57,12 @@ const Home = () => {
               look.
             </p>
             <div className="mx-auto text-center">
-              <button className="btn btn-warning bg-yellow-500 text-white lg:px-10">
+              <Link
+                to={"/allJewelry"}
+                className="btn btn-warning bg-yellow-500 text-white lg:px-10"
+              >
                 Discover More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

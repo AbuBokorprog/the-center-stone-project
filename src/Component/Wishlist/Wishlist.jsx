@@ -3,11 +3,13 @@ import { authContext } from "../../Provider/AuthProvider";
 
 const Wishlist = () => {
   const { user } = useContext(authContext);
+  const [loading, setLoading] = useState(true);
   const [wishlist, setWishlist] = useState([]);
   useEffect(() => {
     fetch(`https://center-stone-server-side.vercel.app/wishlist/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
+        setLoading(false);
         setWishlist(data);
       });
   }, [user?.email]);

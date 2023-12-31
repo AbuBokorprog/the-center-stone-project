@@ -28,9 +28,10 @@ const Jewelry = ({ jewelry }) => {
 
   const wishHandler = () => {
     if (user?.email) {
+      const email = user.email;
+
       if (isWishlist === false) {
-        const email = user?.email;
-        const wishlist = {
+        const wishlistItem = {
           title,
           image,
           cost,
@@ -38,18 +39,20 @@ const Jewelry = ({ jewelry }) => {
           Name,
           email,
         };
+
         fetch("https://center-stone-server-side.vercel.app/wishlist", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(wishlist),
+          body: JSON.stringify(wishlistItem),
         })
           .then((res) => res.json())
           .then((data) => {
-            alert("Added wishlist");
-            setIsWishlist(!isWishlist);
+            if (data.success) {
+              alert("Added wishlist");
+              setIsWishlist(true);
+            }
           });
       } else {
-        const email = user?.email;
         fetch(
           `https://center-stone-server-side.vercel.app/wishlist/${email}/${title}`,
           {
@@ -60,8 +63,8 @@ const Jewelry = ({ jewelry }) => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedItem) {
-              alert("remove wishlist");
-              setIsWishlist(!isWishlist);
+              alert("Removed wishlist");
+              setIsWishlist(false);
             }
           });
       }
