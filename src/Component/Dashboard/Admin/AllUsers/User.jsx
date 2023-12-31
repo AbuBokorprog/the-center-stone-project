@@ -1,18 +1,17 @@
 import React from "react";
 
 const User = ({ user, index }) => {
-  const { Name, email, image, id, Role } = user;
+  const { displayName, email, photoURL, Role } = user;
   return (
     <tbody>
-      {/* row 1 */}
       <tr className="bg-base-200">
         <td>{index}</td>
         <td>
-          <img className="w-20 h-10" src={image} alt="" />
+          <img className="w-32 h-20" src={photoURL} alt="" />
         </td>
-        <td>{Name}</td>
+        <td>{displayName}</td>
         <td>{email}</td>
-        {{ Role } ? <td>{Role}</td> : <td>"client"</td>}
+        <td>{Role}</td>
       </tr>
     </tbody>
   );

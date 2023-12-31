@@ -13,13 +13,10 @@ import AuthProvider from "./Provider/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Dashboard from "./Layout/Dashboard";
 import AllUsers from "./Component/Dashboard/Admin/AllUsers/AllUsers";
-import ManageProduct from "./Component/Dashboard/Admin/ManageProduct/ManageProduct";
-import Selectedproduct from "./Component/Dashboard/Customer/SelectedProduct/Selectedproduct";
-import MyJewelry from "./Component/Dashboard/Manager/MyJewelry/MyJewelry";
-import AddJewelry from "./Component/Dashboard/Manager/AddJewelry";
+import AddJewelry from "./Component/Dashboard/Admin/AddJewelry";
 import About from "./Component/About/About";
-import Cart from "./Component/Cart/Cart";
-import Wishlist from "./Component/Wishlist/Wishlist";
+// import Cart from "./Component/Cart/Cart";
+// import Wishlist from "./Component/Wishlist/Wishlist";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +30,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/allJewelry",
-        element: <AllJewelry></AllJewelry>,
+        element: (
+          <PrivateRoute>
+            <AllJewelry></AllJewelry>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blogs",
@@ -64,22 +65,6 @@ const router = createBrowserRouter([
       {
         path: "allUsers",
         element: <AllUsers></AllUsers>,
-      },
-      {
-        path: "manageClasses",
-        element: <ManageProduct></ManageProduct>,
-      },
-      {
-        path: "mySelectedProduct",
-        element: <Selectedproduct></Selectedproduct>,
-      },
-      {
-        path: "myJewelry",
-        element: (
-          <PrivateRoute>
-            <MyJewelry></MyJewelry>
-          </PrivateRoute>
-        ),
       },
       {
         path: "addJewelry",
