@@ -19,7 +19,7 @@ const Blogs = () => {
       <div className="mb-10">
         <img
           className="w-screen max-h-96"
-          src="/Image/Banner/banner9.jpg"
+          src="/Image/Banner/banner8.jpg"
           alt="Blogs"
         />
       </div>

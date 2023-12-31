@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { authContext } from "../Provider/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
+import Spinner from "../Component/Spinner/Spinner";
 
 const PrivateRoute = ({ children }) => {
   const { user, loader } = useContext(authContext);
@@ -9,11 +10,7 @@ const PrivateRoute = ({ children }) => {
     return children;
   }
   if (loader) {
-    return (
-      <div className="radial-progress text-center" style={{ "--value": 70 }}>
-        70%
-      </div>
-    );
+    return <Spinner />;
   }
   return (
     <Navigate to="/login" state={{ from: location }} replace={true}></Navigate>

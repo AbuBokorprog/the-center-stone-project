@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -31,9 +32,12 @@ const Banner = () => {
               charms.
             </p>
             <div>
-              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
+              <Link
+                to={"/allJewelry"}
+                className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0"
+              >
                 View More
-              </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -59,11 +63,14 @@ const Banner = () => {
               collection for all your daily and evening look accessories. Be the
               latest trend!
             </p>
-            {/* <div>
-              <button className="btn btn-error font-medium bg-red-600 lg:px-10 border-0">
+            <div>
+              <Link
+                to={"/allJewelry"}
+                className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0"
+              >
                 View More
-              </button>
-            </div> */}
+              </Link>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -88,9 +95,12 @@ const Banner = () => {
               charms.
             </p>
             <div>
-              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
+              <Link
+                to={"/allJewelry"}
+                className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0"
+              >
                 View More
-              </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -116,9 +126,12 @@ const Banner = () => {
               latest trend!
             </p>
             <div>
-              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
+              <Link
+                to={"/allJewelry"}
+                className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0"
+              >
                 View More
-              </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -141,9 +154,12 @@ const Banner = () => {
               shop and well make your important moments in life even greater.
             </p>
             <div>
-              <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">
+              <Link
+                to={"/allJewelry"}
+                className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0"
+              >
                 View More
-              </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

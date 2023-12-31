@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
 import BestProduct from "./BestProduct";
 import { Link } from "react-router-dom";
+import Spinner from "../../Component/Spinner/Spinner";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -24,11 +25,15 @@ const Home = () => {
           </h2>
           <hr className="border-2 border-black" />
         </div>
-        <div className="grid sm:grid-cols-1 mt-10 lg:mt-20 px-1 lg:px-0 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {best.slice(0, 8).map((b) => (
-            <BestProduct key={b.id} best={b}></BestProduct>
-          ))}
-        </div>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <div className="grid sm:grid-cols-1 mt-10 lg:mt-20 px-1 lg:px-0 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {best.slice(0, 8).map((b) => (
+              <BestProduct key={b.id} best={b}></BestProduct>
+            ))}
+          </div>
+        )}
       </section>
       <section className="my-10 lg:my-20">
         <div className="lg:flex lg:flex-row-reverse gap-10 justify-center items-center">
