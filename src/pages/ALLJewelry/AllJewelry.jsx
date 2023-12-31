@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Jewelry from "./Jewelry";
-import JewelrySkeleton from "../Spinner/JewelrySkeleton";
+import JewelrySkeleton from "../../Component/Spinner/JewelrySkeleton";
 
 const AllJewelry = () => {
   const [jewelries, setJewelries] = useState([]);

@@ -138,7 +138,7 @@ const Banner = () => {
             </div>
             <p className="hidden lg:block lg:px-40 lg:py-5 lg:font-medium text-white">
               We create quality pieces tailored for our customers. Choose our
-              shop and we'll make your important moments in life even greater.
+              shop and well make your important moments in life even greater.
             </p>
             <div>
               <button className="btn btn-warning font-medium bg-yellow-500 text-white lg:px-10 border-0">

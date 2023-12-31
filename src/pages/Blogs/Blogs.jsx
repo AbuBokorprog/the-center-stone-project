@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Blog from "./Blog";
-import BlogsSkeleton from "../Spinner/BlogsSkeleton";
+import BlogsSkeleton from "../../Component/Spinner/BlogsSkeleton";
 
 const Blogs = () => {
   const [loading, setLoading] = useState(true);
