@@ -15,6 +15,7 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import AllJewelry from "./pages/ALLJewelry/AllJewelry";
 import Blogs from "./pages/Blogs/Blogs";
+import BestProductDes from "./pages/Home/BestProductDes";
 // import Cart from "./Component/Cart/Cart";
 // import Wishlist from "./Component/Wishlist/Wishlist";
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/jewelry/:id",
+        element: <BestProductDes />,
       },
       {
         path: "/allJewelry",
