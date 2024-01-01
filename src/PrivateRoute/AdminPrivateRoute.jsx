@@ -18,7 +18,7 @@ const AdminPrivateRoute = ({ children }) => {
     return children;
   }
   if (loader) {
-    return <Spinner />;
+    return <p>...Loading</p>;
   }
   return (
     <Navigate to="/login" state={{ from: location }} replace={true}></Navigate>
