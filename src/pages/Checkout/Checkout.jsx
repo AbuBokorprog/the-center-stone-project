@@ -40,6 +40,29 @@ const Checkout = () => {
     alert("Payment success!");
   };
 
+  const deleteHandler = () => {
+    const email = user?.email;
+    fetch(`https://center-stone-server-side.vercel.app/cart/${email}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          setCart((prevCarts) =>
+            prevCarts.filter((cart) => cart.email !== email)
+          );
+
+          alert("Remove from cart");
+        } else {
+          alert("Item not found in the cart");
+        }
+      })
+      .catch((error) => {
+        console.error("Error deleting item:", error);
+      });
+  };
+
   return (
     <div className="pb-10 lg:pb-20">
       <div className="flex gap-6">
@@ -104,7 +127,10 @@ const Checkout = () => {
             img={"w-20 h-20"}
             gap={"gap-4"}
             payment={
-              <div className="text-right mt-10 mx-auto ">
+              <div
+                onClick={deleteHandler}
+                className="text-right mt-10 mx-auto "
+              >
                 <Link
                   onClick={handleSubmit(onSubmit)}
                   className="btn btn-warning"

@@ -41,7 +41,7 @@ const BestProductDes = () => {
   };
 
   return (
-    <div className="flex gap-10 ">
+    <div className="flex gap-10 pb-10 lg:pb-20">
       <img
         src={singleProduct?.image}
         alt={singleProduct?.title}
