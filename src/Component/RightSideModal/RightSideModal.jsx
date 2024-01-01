@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { MdOutlineShoppingBag } from "react-icons/md";
-import Cart from "../Cart/Cart";
 
 const RightSideModal = ({ title, component }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

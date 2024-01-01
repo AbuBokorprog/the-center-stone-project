@@ -4,8 +4,8 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { authContext } from "../Provider/AuthProvider";
 import RightSideModal from "../Component/RightSideModal/RightSideModal";
-import Cart from "../Component/Cart/Cart";
-import Wishlist from "../Component/Wishlist/Wishlist";
+import Wishlist from "../Component/RightSideModal/Wishlist";
+import Cart from "../Component/RightSideModal/Cart";
 
 const Navbar = () => {
   const { user, logout } = useContext(authContext);
