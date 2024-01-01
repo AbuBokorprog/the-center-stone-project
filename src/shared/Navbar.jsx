@@ -9,7 +9,6 @@ import Cart from "../Component/RightSideModal/Cart";
 
 const Navbar = () => {
   const { user, logout } = useContext(authContext);
-  // console.log(user.photoURL);
   const logoutHandler = () => {
     logout()
       .then(() => {})
@@ -70,9 +69,8 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <img className="w-20 lg:w-32" src="/Image/logo.png" alt="" />
           <Link to="/" className="font-bold lg:visible text-sm lg:text-xl">
-            The Center Stone
+            <img className="w-20 lg:w-32" src="/Image/logo.png" alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

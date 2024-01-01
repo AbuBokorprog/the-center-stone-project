@@ -58,63 +58,67 @@ const Cart = ({ img, gap, payment }) => {
 
   return (
     <div className="pb-10 lg:pb-20">
-      {/* <h1 className="text-3xl mb-6 font-bold">Your Cart</h1> */}
+      {carts.length > 0 ? (
+        <div>
+          {carts.map((c) => (
+            <div key={c._id}>
+              <div
+                className={`flex ${
+                  gap ? gap : "gap-10"
+                } mx-auto justify-between items-center my-2`}
+              >
+                <figure>
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    className={`${img ? img : "w-60 h-60"} `}
+                  />
+                </figure>
+                <h6 className="text-3xl mb-6 w-96">{c.title}</h6>
+                <div className="flex gap-4 items-center">
+                  <p className="font-semibold">Quantity: {c.quantity}</p>
+                </div>
+                <div>
+                  <p className="font-bold">
+                    Price: {parseInt(c.cost) * c.quantity}
+                  </p>
+                </div>
+                <button onClick={() => deleteHandler(user?.email, c.title)}>
+                  X
+                </button>
+              </div>
+            </div>
+          ))}
 
-      {carts.map((c) => (
-        <div key={c._id}>
-          <div
-            className={`flex ${
-              gap ? gap : "gap-10"
-            } mx-auto justify-between items-center my-2`}
-          >
-            <figure>
-              <img
-                src={c.image}
-                alt={c.title}
-                className={`${img ? img : "w-60 h-60"} `}
-              />
-            </figure>
-            <h6 className="text-3xl mb-6 w-96">{c.title}</h6>
-            <div className="flex gap-4 items-center">
-              <p className="font-semibold">Quantity: {c.quantity}</p>
+          <div className="">
+            <div className="my-8 card">
+              <div className="flex justify-between my-1">
+                <h2 className="text-3xl">Total:</h2>
+                <h2 className="text-3xl">${overallTotal}</h2>
+              </div>
+              <div className="flex justify-between my-1">
+                <h2 className="text-3xl">Tax $ Shipping Charge:</h2>
+                <h2 className="text-3xl">$5%</h2>
+              </div>
+              <div className="flex justify-between">
+                <h2 className="text-3xl">Total Amount:</h2>
+                <h2 className="text-3xl text-yellow-400">{overallTotal}</h2>
+              </div>
             </div>
-            <div>
-              <p className="font-bold">
-                Price: {parseInt(c.cost) * c.quantity}
-              </p>
-            </div>
-            <button onClick={() => deleteHandler(user?.email, c.title)}>
-              X
-            </button>
+            {payment ? (
+              payment
+            ) : (
+              <div className="text-right mt-10 mx-auto ">
+                <Link to={"/checkout"} className="btn btn-warning">
+                  Checkout
+                </Link>
+              </div>
+            )}
           </div>
         </div>
-      ))}
-
-      <div className="">
-        <div className="my-8 card">
-          <div className="flex justify-between my-1">
-            <h2 className="text-3xl">Total:</h2>
-            <h2 className="text-3xl">${overallTotal}</h2>
-          </div>
-          <div className="flex justify-between my-1">
-            <h2 className="text-3xl">Tax $ Shipping Charge:</h2>
-            <h2 className="text-3xl">$5%</h2>
-          </div>
-          <div className="flex justify-between">
-            <h2 className="text-3xl">Total Amount:</h2>
-            <h2 className="text-3xl text-yellow-400">{overallTotal}</h2>
-          </div>
-        </div>
-        {payment ? (
-          payment
-        ) : (
-          <div className="text-right mt-10 mx-auto ">
-            <Link to={"/checkout"} className="btn btn-warning">
-              Checkout
-            </Link>
-          </div>
-        )}
-      </div>
+      ) : (
+        <p>Your Cart is Empty</p>
+      )}
     </div>
   );
 };

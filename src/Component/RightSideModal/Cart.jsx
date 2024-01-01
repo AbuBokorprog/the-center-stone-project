@@ -96,48 +96,58 @@ const Cart = () => {
   };
 
   return (
-    <div className="pb-20">
-      <h1 className="text-3xl mb-6">Your Cart</h1>
-      {carts.map((c) => (
-        <div key={c._id}>
-          <div className="flex gap-10 mx-auto items-center my-2">
-            <figure>
-              <img src={c.image} alt="" className="w-32 h-20" />
-            </figure>
-            <h6 className="w-44">{c.title}</h6>
-            <div className="flex gap-4 items-center">
-              <button
-                onClick={() => minusHandler(c._id, c.quantity)}
-                className="btn"
-              >
-                -
-              </button>
-              <p>{c.quantity}</p>
-              <button
-                onClick={() => plusHandler(c._id, c.quantity)}
-                className="btn"
-              >
-                +
-              </button>
+    <>
+      {carts.length > 0 ? (
+        <div className="pb-20">
+          <h1 className="text-3xl mb-6">Your Cart</h1>
+          {carts.map((c) => (
+            <div key={c._id}>
+              <div className="flex gap-10 mx-auto items-center my-2">
+                <figure>
+                  <img src={c.image} alt="" className="w-32 h-20" />
+                </figure>
+                <h6 className="w-44">{c.title}</h6>
+                <div className="flex gap-4 items-center">
+                  <button
+                    onClick={() => minusHandler(c._id, c.quantity)}
+                    className="btn"
+                  >
+                    -
+                  </button>
+                  <p>{c.quantity}</p>
+                  <button
+                    onClick={() => plusHandler(c._id, c.quantity)}
+                    className="btn"
+                  >
+                    +
+                  </button>
+                </div>
+                <button onClick={() => deleteHandler(user?.email, c.title)}>
+                  X
+                </button>
+              </div>
+              <hr />
+              <p className="font-bold">
+                Price: {parseInt(c.cost) * c.quantity}
+              </p>
             </div>
-            <button onClick={() => deleteHandler(user?.email, c.title)}>
-              X
-            </button>
-          </div>
-          <hr />
-          <p className="font-bold">Price: {parseInt(c.cost) * c.quantity}</p>
-        </div>
-      ))}
+          ))}
 
-      <div className="text-center mt-10 mx-auto flex justify-center items-center gap-20">
-        <Link to={"/checkout"} className="btn btn-warning">
-          Checkout
-        </Link>
-        <Link to={"/cart"} className="btn btn-warning">
-          View Cart
-        </Link>
-      </div>
-    </div>
+          <div className="text-center mt-10 mx-auto flex justify-center items-center gap-20">
+            <Link to={"/checkout"} className="btn btn-warning">
+              Checkout
+            </Link>
+            <Link to={"/cart"} className="btn btn-warning">
+              View Cart
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <div className="mx-auto text-center">
+          <p>Your Cart is Empty</p>
+        </div>
+      )}
+    </>
   );
 };
 

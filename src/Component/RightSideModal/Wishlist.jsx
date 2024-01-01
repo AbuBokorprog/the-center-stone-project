@@ -14,21 +14,29 @@ const Wishlist = () => {
       });
   }, [user?.email]);
   return (
-    <div className="pb-20">
-      <h1 className="text-3xl mb-6">Your Wishlist</h1>
+    <>
+      {wishlist.length > 0 ? (
+        <div className="pb-20">
+          <h1 className="text-3xl mb-6">Your Wishlist</h1>
 
-      {wishlist.map((c) => (
-        <div key={c._id}>
-          <div className="flex mx-auto justify-between items-center">
-            <figure>
-              <img src={c.image} alt="" className="w-32 h-20" />
-            </figure>
-            <h6 className="w-60">{c.title}</h6>
-            <button className="btn btn-warning">View</button>
-          </div>
+          {wishlist.map((c) => (
+            <div key={c._id}>
+              <div className="flex mx-auto justify-between items-center">
+                <figure>
+                  <img src={c.image} alt="" className="w-32 h-20" />
+                </figure>
+                <h6 className="w-60">{c.title}</h6>
+                <button className="btn btn-warning">View</button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      ) : (
+        <div>
+          <p>Your wishlist is Empty</p>
+        </div>
+      )}
+    </>
   );
 };
 

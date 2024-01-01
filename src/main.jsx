@@ -18,8 +18,9 @@ import Blogs from "./pages/Blogs/Blogs";
 import BestProductDes from "./pages/Home/BestProductDes";
 import Cart from "./pages/Cart/Cart";
 import Checkout from "./pages/Checkout/Checkout";
-// import Cart from "./Component/Cart/Cart";
-// import Wishlist from "./Component/Wishlist/Wishlist";
+import OrderHistory from "./Component/Dashboard/Customer/OrderHistory";
+import AdminPrivateRoute from "./PrivateRoute/AdminPrivateRoute";
+import UserPrivateRoute from "./PrivateRoute/UserPrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -61,11 +62,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: (
+          <PrivateRoute>
+            <Cart />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/checkout",
-        element: <Checkout />,
+        element: (
+          <PrivateRoute>
+            <Checkout />
+          </PrivateRoute>
+        ),
       },
     ],
   },
@@ -79,14 +88,26 @@ const router = createBrowserRouter([
     children: [
       {
         path: "allUsers",
-        element: <AllUsers></AllUsers>,
+        element: (
+          <AdminPrivateRoute>
+            <AllUsers></AllUsers>
+          </AdminPrivateRoute>
+        ),
+      },
+      {
+        path: "paymentHistory",
+        element: (
+          <UserPrivateRoute>
+            <OrderHistory />
+          </UserPrivateRoute>
+        ),
       },
       {
         path: "addJewelry",
         element: (
-          <PrivateRoute>
+          <AdminPrivateRoute>
             <AddJewelry></AddJewelry>
-          </PrivateRoute>
+          </AdminPrivateRoute>
         ),
       },
     ],
