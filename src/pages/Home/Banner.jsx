@@ -16,7 +16,7 @@ const Banner = () => {
             src="/Image/Banner/banner5.jpg"
             alt=""
           />
-          <div className="absolute top-12 lg:top-20 text-center left-20 lg:left-0 text-white">
+          <div className="absolute top-16 lg:top-20 text-center mx-auto left-[100px] lg:left-0 text-white">
             <p className="text-xl lg:text-2xl font-semibold">
               Essential Accessories
             </p>
@@ -47,7 +47,7 @@ const Banner = () => {
             src="/Image/Banner/banner15.jpg"
             alt=""
           />
-          <div className="absolute top-20 lg:top-20 text-center left-24 lg:left-0 text-black">
+          <div className="absolute top-16 lg:top-20 text-center mx-auto left-[100px] lg:left-0 text-black">
             <p className="text-xl lg:text-2xl font-semibold">
               Hot of the season
             </p>
@@ -79,7 +79,7 @@ const Banner = () => {
             src="/Image/Banner/banner14.jpg"
             alt=""
           />
-          <div className="absolute top-12 lg:top-20 text-center left-20 lg:left-0 text-white">
+          <div className="absolute top-16 lg:top-20 text-center mx-auto left-[100px] lg:left-0 text-white">
             <p className="text-xl lg:text-2xl font-semibold">
               Essential Accessories
             </p>
@@ -110,7 +110,7 @@ const Banner = () => {
             src="/Image/Banner/banner17.jpg"
             alt=""
           />
-          <div className="absolute top-12 lg:top-20 text-center left-24 lg:left-0 text-white">
+          <div className="absolute top-16 lg:top-20 text-center mx-auto left-[100px] lg:left-0 text-white">
             <p className="text-xl lg:text-2xl font-semibold">
               Hot of the season
             </p>
@@ -141,7 +141,7 @@ const Banner = () => {
             src="/Image/Banner/banner6.jpg"
             alt=""
           />
-          <div className="absolute top-12 lg:top-20 text-center left-20 lg:left-0 text-white">
+          <div className="absolute top-16 lg:top-20 text-center mx-auto left-[100px] lg:left-0 text-white">
             <p className="text-xl lg:text-2xl font-semibold">
               Ultimate ring models
             </p>
