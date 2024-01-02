@@ -21,6 +21,7 @@ import Checkout from "./pages/Checkout/Checkout";
 import OrderHistory from "./Component/Dashboard/Customer/OrderHistory";
 import AdminPrivateRoute from "./PrivateRoute/AdminPrivateRoute";
 import UserPrivateRoute from "./PrivateRoute/UserPrivateRoute";
+import Wishlist from "./Component/Dashboard/Customer/Wishlist";
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,14 @@ const router = createBrowserRouter([
         element: (
           <UserPrivateRoute>
             <OrderHistory />
+          </UserPrivateRoute>
+        ),
+      },
+      {
+        path: "wishlist",
+        element: (
+          <UserPrivateRoute>
+            <Wishlist />
           </UserPrivateRoute>
         ),
       },

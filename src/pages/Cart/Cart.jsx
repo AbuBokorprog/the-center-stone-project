@@ -63,7 +63,7 @@ const Cart = ({ img, gap, payment }) => {
           {carts.map((c) => (
             <div key={c._id}>
               <div
-                className={`flex ${
+                className={`lg:flex ${
                   gap ? gap : "gap-10"
                 } mx-auto justify-between items-center my-2`}
               >
@@ -71,27 +71,36 @@ const Cart = ({ img, gap, payment }) => {
                   <img
                     src={c.image}
                     alt={c.title}
-                    className={`${img ? img : "w-60 h-60"} `}
+                    className={`${img ? img : "w-60 h-60 mx-auto"} `}
                   />
                 </figure>
-                <h6 className="text-3xl mb-6 w-96">{c.title}</h6>
-                <div className="flex gap-4 items-center">
-                  <p className="font-semibold">Quantity: {c.quantity}</p>
+                <h6 className="text-3xl mb-6 text-center lg:text-left w-96">
+                  {c.title}
+                </h6>
+                <div className="flex gap-4 mx-auto items-center">
+                  <p className="font-semibold mx-auto">
+                    Quantity: {c.quantity}
+                  </p>
                 </div>
                 <div>
-                  <p className="font-bold">
+                  <p className="font-bold text-center">
                     Price: {parseInt(c.cost) * c.quantity}
                   </p>
                 </div>
-                <button onClick={() => deleteHandler(user?.email, c.title)}>
-                  X
-                </button>
+                <div className="text-center mx-auto">
+                  <button
+                    className="btn "
+                    onClick={() => deleteHandler(user?.email, c.title)}
+                  >
+                    X
+                  </button>
+                </div>
               </div>
             </div>
           ))}
 
           <div className="">
-            <div className="my-8 card">
+            <div className="my-8 card px-4 lg:px-0">
               <div className="flex justify-between my-1">
                 <h2 className="text-3xl">Total:</h2>
                 <h2 className="text-3xl">${overallTotal}</h2>
@@ -105,15 +114,17 @@ const Cart = ({ img, gap, payment }) => {
                 <h2 className="text-3xl text-yellow-400">{overallTotal}</h2>
               </div>
             </div>
-            {payment ? (
-              payment
-            ) : (
-              <div className="text-right mt-10 mx-auto ">
-                <Link to={"/checkout"} className="btn btn-warning">
-                  Checkout
-                </Link>
-              </div>
-            )}
+            <div className="pe-4">
+              {payment ? (
+                payment
+              ) : (
+                <div className="text-right mt-10 mx-auto ">
+                  <Link to={"/checkout"} className="btn btn-warning">
+                    Checkout
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       ) : (

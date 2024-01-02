@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import { authContext } from "../../Provider/AuthProvider";
-import WishlistSkeleton from "../Spinner/WishlistSkeleton";
+import { authContext } from "../../../Provider/AuthProvider";
+import WishlistSkeleton from "../../Spinner/WishlistSkeleton";
 
 const Wishlist = () => {
   const { user } = useContext(authContext);

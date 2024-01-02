@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { authContext } from "../Provider/AuthProvider";
 import RightSideModal from "../Component/RightSideModal/RightSideModal";
-import Wishlist from "../Component/RightSideModal/Wishlist";
 import Cart from "../Component/RightSideModal/Cart";
 
 const Navbar = () => {
@@ -18,8 +16,8 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <div className="dropdown z-10">
+            <label tabIndex={0} className="btn  btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -109,17 +107,16 @@ const Navbar = () => {
             <RightSideModal
               component={<Cart />}
               title={
-                <MdOutlineShoppingBag className="w-full"></MdOutlineShoppingBag>
+                <MdOutlineShoppingBag className="w-4 h-4"></MdOutlineShoppingBag>
               }
             />
           </div>
-          <div>
+          {/* <div>
             <RightSideModal
               component={<Wishlist />}
-              title={<FaRegHeart className="w-full"></FaRegHeart>}
+              title={<FaRegHeart className="w-4 h-4"></FaRegHeart>}
             />
-          </div>
-
+          </div> */}
           {user?.email ? (
             <div className="flex justify-center items-center gap-3">
               <div>

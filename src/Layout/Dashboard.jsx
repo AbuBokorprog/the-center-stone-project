@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { authContext } from "../Provider/AuthProvider";
-import { FaHome, FaUsers } from "react-icons/fa";
+import { FaHome, FaUsers, FaRegHeart } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
@@ -23,7 +23,7 @@ const Dashboard = () => {
           <Outlet />
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary my-auto mx-auto drawer-button lg:hidden"
+            className="btn btn-primary text-left drawer-button lg:hidden"
           >
             Open drawer
           </label>
@@ -31,7 +31,7 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
-          <ul className="menu   p-4 w-80 h-full text-xl font-medium  ">
+          <ul className="menu p-4 w-80 h-full text-xl font-medium  ">
             <div>
               <h2 className="text-3xl font-semibold text-center my-2">
                 The Center Stone
@@ -51,6 +51,14 @@ const Dashboard = () => {
               </>
             ) : (
               <>
+                <li>
+                  <Link to="wishlist">
+                    <span>
+                      <FaRegHeart />
+                    </span>
+                    Wishlist
+                  </Link>
+                </li>
                 <li>
                   <Link to="paymentHistory">
                     <span>

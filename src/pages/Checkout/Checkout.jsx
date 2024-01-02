@@ -65,9 +65,9 @@ const Checkout = () => {
 
   return (
     <div className="pb-10 lg:pb-20">
-      <div className="flex gap-6">
+      <div className="lg:flex gap-6">
         <div className="w-full">
-          <form>
+          <form className="px-4">
             <div>
               <label>Name</label>
               <input
@@ -122,7 +122,7 @@ const Checkout = () => {
             </div>
           </form>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <Cart
             img={"w-20 h-20"}
             gap={"gap-4"}
