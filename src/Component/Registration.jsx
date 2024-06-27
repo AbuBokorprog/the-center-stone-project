@@ -56,13 +56,13 @@ const Registration = () => {
   };
 
   return (
-    <div className="pb-10">
-      <div className="hero min-h-screen ">
+    <div className="py-10">
+      <div className="hero min-h-screen w-full">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Registration now!</h1>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="card-body bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"
@@ -114,7 +114,7 @@ const Registration = () => {
                   required
                 />
                 <div
-                  className=" relative bottom-8 ml-64"
+                  className=" relative bottom-8 ml-72"
                   onClick={() => setShow(!show)}
                 >
                   {show ? (
@@ -158,7 +158,7 @@ const Registration = () => {
                   required
                 />
                 <div
-                  className=" relative bottom-8 ml-64"
+                  className=" relative bottom-8 ml-72"
                   onClick={() => setConfirmShow(!confirmShow)}
                 >
                   {confirmShow ? (
